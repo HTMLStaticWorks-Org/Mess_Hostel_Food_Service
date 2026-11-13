@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Meal Plans &amp; Sample Pricing — Aangan Rasoi Mess &amp; Hostel Dining</title>
+  <meta name="description"
+    content="Compare monthly and weekly hostel mess meal plans: Breakfast-only, Lunch & Dinner, and Full-Day 4-Meal passes with Pure Veg and Egg/Non-Veg options." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ======================= STICKY NAVBAR ======================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Aangan Rasoi Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z" />
+            <path d="M4 10h16v3a8 8 0 0 1-16 0v-3z" />
+            <path d="M3 21h18" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Aangan Rasoi</span>
+          <span class="brand-tagline">Student Mess &amp; Dining</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">Home 1 — Classic Homely</span>
+                <span class="dropdown-item-desc">Warm hospitality &amp; full mess experience</span>
+              </a>
+              <a href="home-2.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">Home 2 — Editorial Dining</span>
+                <span class="dropdown-item-desc">Menu-first showcase &amp; kitchen story</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="meal-plans.html" class="nav-link active">Meal Plans</a>
+          </li>
+          <li class="nav-item">
+            <a href="hygiene.html" class="nav-link">Hygiene</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+
+          <!-- Mobile Drawer Footer Actions -->
+          <li class="mobile-nav-footer">
+            <a href="signup.html" class="btn btn-terracotta btn-full">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- RTL Toggle Button: Same style as theme button, ONLY "RTL" text inside -->
+        <button type="button" class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL direction"
+          title="Toggle RTL direction">RTL</button>
+
+        <!-- Theme Toggle Button -->
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle Light/Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="signup.html" class="nav-signup-btn nav-signup-desktop">Sign Up</a>
+
+        <button type="button" class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav-menu"
+          aria-label="Toggle Navigation Menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================= PAGE HERO ======================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner center">
+          <span class="eyebrow">Transparent Student Subscriptions</span>
+          <h1>Affordable, Flexible Meal Plans for Every Student Routine</h1>
+          <p class="lead">
+            Compare our monthly and weekly student meal plans below. Switch between <strong>Monthly (30 Days)</strong>
+            and <strong>Weekly Trial (7 Days)</strong> or choose between <strong>Pure Vegetarian</strong> and
+            <strong>Veg + Egg / Non-Veg</strong> options.
+          </p>
+          <p style="font-size: 0.825rem; color: var(--text-muted); margin-top: var(--space-2);">
+            <em>Note: All prices displayed on this page are clearly marked editable sample prices in INR for template
+              demonstration.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= INTERACTIVE MEAL PLAN CARDS ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="plan-controls-bar">
+          <div class="segmented-control" role="group" aria-label="Select Plan Duration">
+            <button type="button" class="segment-btn active" data-billing-cycle="monthly">Monthly Pass (30
+              Days)</button>
+            <button type="button" class="segment-btn" data-billing-cycle="weekly">Weekly Trial (7 Days)</button>
+          </div>
+          <div class="segmented-control" role="group" aria-label="Select Dietary Option">
+            <button type="button" class="segment-btn active" data-diet-filter="veg">100% Pure Vegetarian</button>
+            <button type="button" class="segment-btn" data-diet-filter="nonveg">Veg + Egg / Non-Veg (4x/wk)</button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Card 1: Breakfast Only -->
+          <div class="pricing-card" data-plan-card="breakfast-only" data-price-monthly-veg="1,150"
+            data-price-monthly-nonveg="1,350" data-price-weekly-veg="320" data-price-weekly-nonveg="380">
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h2 class="plan-name">Breakfast-Only Pass</h2>
+            <p class="plan-Best-for">Morning tiffin + Chai/Coffee before 9:00 AM lectures</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">1,150</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing in INR</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Daily hot breakfast (7:30 AM – 9:30 AM)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Poha, Masala Dosa, Idli-Vada, Stuffed Paratha, Upma rotation</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Includes Kulhad Chai, Filter Coffee, or Warm Milk</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Sprouts / Banana (or 2 Boiled Eggs in Non-Veg tier)</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=breakfast-only&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-outline btn-full" data-plan-cta>Enquire for Breakfast Pass</a>
+          </div>
+
+          <!-- Card 2: Single Meal (Lunch OR Dinner) -->
+          <div class="pricing-card" data-plan-card="single-thali" data-price-monthly-veg="1,600"
+            data-price-monthly-nonveg="1,850" data-price-weekly-veg="440" data-price-weekly-nonveg="510">
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h2 class="plan-name">Single Thali Pass</h2>
+            <p class="plan-Best-for">Choose either Daily Lunch OR Daily Dinner</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">1,600</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing in INR</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>1 Full Homestyle Thali per day (Lunch or Dinner)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>4 Hot Phulkas, Dal Tadka, Seasonal Sabzi, Rice, Salad &amp; Curd</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Flexible switch between Lunch &amp; Dinner with 4-hr notice</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 3 days meal pause carry-forward per month</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=single-thali&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-outline btn-full" data-plan-cta>Enquire for Single Thali</a>
+          </div>
+
+          <!-- Card 3: Morning & Night Pass -->
+          <div class="pricing-card" data-plan-card="breakfast-dinner" data-price-monthly-veg="2,400"
+            data-price-monthly-nonveg="2,750" data-price-weekly-veg="650" data-price-weekly-nonveg="760">
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h2 class="plan-name">Morning &amp; Night Pass</h2>
+            <p class="plan-Best-for">Breakfast + Dinner • Ideal for interns &amp; clinical postings</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">2,400</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing in INR</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Daily Hot Breakfast + Morning Tea/Coffee</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full Homestyle Dinner Thali (7:45 PM – 9:30 PM)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Includes Friday Dum Biryani &amp; Sweet Night</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 4 days meal pause carry-forward per month</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=breakfast-dinner&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-outline btn-full" data-plan-cta>Enquire for Morning &amp; Night</a>
+          </div>
+
+          <!-- Card 4: Two-Meal Core Pass (Lunch + Dinner) -->
+          <div class="pricing-card" data-plan-card="lunch-dinner" data-price-monthly-veg="2,850"
+            data-price-monthly-nonveg="3,250" data-price-weekly-veg="750" data-price-weekly-nonveg="880">
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h2 class="plan-name">Two-Meal Core Pass</h2>
+            <p class="plan-Best-for">Lunch + Dinner • Our classic student mess subscription</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">2,850</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing in INR</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Unlimited Rice, Dal &amp; Hot Phulkas at Lunch &amp; Dinner</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Wednesday Chaas, Friday Biryani &amp; Sunday Feast included</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dine-in hall OR insulated steel tiffin pickup</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 4 days meal pause carry-forward per month</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=lunch-dinner&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-primary btn-full" data-plan-cta>Select Two-Meal Core Pass</a>
+          </div>
+
+          <!-- Card 5: Three-Meal Pass (Breakfast + Lunch + Dinner) -->
+          <div class="pricing-card" data-plan-card="three-meal-pass" data-price-monthly-veg="3,300"
+            data-price-monthly-nonveg="3,750" data-price-weekly-veg="860" data-price-weekly-nonveg="990">
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h2 class="plan-name">Three-Meal Daily Pass</h2>
+            <p class="plan-Best-for">Breakfast + Lunch + Dinner (Without evening snacks)</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">3,300</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing in INR</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Morning Breakfast + Afternoon Lunch + Night Dinner</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Includes Sunday Grand Feast &amp; 2x/week Desserts</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Complimentary Sick-Day Khichdi &amp; Haldi Milk care</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 5 days meal pause carry-forward per month</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=three-meal-pass&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-outline btn-full" data-plan-cta>Enquire for Three-Meal Pass</a>
+          </div>
+
+          <!-- Card 6: Complete 4-Meal Pass (Featured) -->
+          <div class="pricing-card featured" data-plan-card="full-day-all" data-price-monthly-veg="3,600"
+            data-price-monthly-nonveg="4,100" data-price-weekly-veg="950" data-price-weekly-nonveg="1,100">
+            <span class="popular-ribbon">Best All-Round Value</span>
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h2 class="plan-name">Complete 4-Meal Pass</h2>
+            <p class="plan-Best-for">Breakfast + Lunch + Evening Snacks + Dinner</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">3,600</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing in INR</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>All 4 daily meals + Morning &amp; Evening Kulhad Chai/Coffee</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>5:00 PM Hot Snacks (Samosa, Cutlet, Corn Bhel, Sandwich)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 6 days monthly pause / vacation carry-forward</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Exam-week late night tea flask + 2 guest parent thalis/mo</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=full-day-all&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-terracotta btn-full" data-plan-cta>Join Complete 4-Meal Pass</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= VEG vs NON-VEG & WEEKLY vs MONTHLY COMPARISON TABLE ======================= -->
+    <section id="plan-comparison" class="section bg-secondary">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow eyebrow-sage">Side-by-Side Comparison</span>
+          <h2>Weekly &amp; Monthly Plan Matrix (Sample INR Rates)</h2>
+          <p>Compare exact inclusions, pause credits, and sample pricing across all student plans.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="comparison-table" aria-label="Meal Plan Comparison Matrix">
+            <thead>
+              <tr>
+                <th>Meal Plan Name</th>
+                <th>Meals Covered</th>
+                <th>Weekly Veg (7d)</th>
+                <th>Monthly Veg (30d)</th>
+                <th>Monthly Veg + Egg/Non-Veg</th>
+                <th>Pause Credits</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Breakfast-Only Pass</strong></td>
+                <td>Breakfast + Morning Tea/Coffee</td>
+                <td class="tabular-nums">₹320*</td>
+                <td class="tabular-nums"><strong>₹1,150*</strong></td>
+                <td class="tabular-nums">₹1,350* (Daily Eggs)</td>
+                <td>2 Days / mo</td>
+                <td><a href="contact.html?plan=breakfast-only#enquiry-form" class="link-accent">Enquire &rarr;</a></td>
+              </tr>
+              <tr>
+                <td><strong>Single Thali Pass</strong></td>
+                <td>Lunch OR Dinner (Flexible)</td>
+                <td class="tabular-nums">₹440*</td>
+                <td class="tabular-nums"><strong>₹1,600*</strong></td>
+                <td class="tabular-nums">₹1,850* (3x/wk Egg/Meat)</td>
+                <td>3 Days / mo</td>
+                <td><a href="contact.html?plan=single-thali#enquiry-form" class="link-accent">Enquire &rarr;</a></td>
+              </tr>
+              <tr>
+                <td><strong>Morning &amp; Night Pass</strong></td>
+                <td>Breakfast + Dinner</td>
+                <td class="tabular-nums">₹650*</td>
+                <td class="tabular-nums"><strong>₹2,400*</strong></td>
+                <td class="tabular-nums">₹2,750* (4x/wk Egg/Meat)</td>
+                <td>4 Days / mo</td>
+                <td><a href="contact.html?plan=breakfast-dinner#enquiry-form" class="link-accent">Enquire &rarr;</a>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Two-Meal Core Pass</strong></td>
+                <td>Lunch + Dinner</td>
+                <td class="tabular-nums">₹750*</td>
+                <td class="tabular-nums"><strong>₹2,850*</strong></td>
+                <td class="tabular-nums">₹3,250* (4x/wk Egg/Meat)</td>
+                <td>4 Days / mo</td>
+                <td><a href="contact.html?plan=lunch-dinner#enquiry-form" class="link-accent">Enquire &rarr;</a></td>
+              </tr>
+              <tr>
+                <td><strong>Three-Meal Daily Pass</strong></td>
+                <td>Breakfast + Lunch + Dinner</td>
+                <td class="tabular-nums">₹860*</td>
+                <td class="tabular-nums"><strong>₹3,300*</strong></td>
+                <td class="tabular-nums">₹3,750* (4x/wk Egg/Meat)</td>
+                <td>5 Days / mo</td>
+                <td><a href="contact.html?plan=three-meal-pass#enquiry-form" class="link-accent">Enquire &rarr;</a></td>
+              </tr>
+              <tr>
+                <td><strong>Complete 4-Meal Pass</strong></td>
+                <td>Breakfast + Lunch + Snacks + Dinner</td>
+                <td class="tabular-nums">₹950*</td>
+                <td class="tabular-nums"><strong>₹3,600*</strong></td>
+                <td class="tabular-nums">₹4,100* (Daily Egg + 3x Chicken)</td>
+                <td>6 Days / mo</td>
+                <td><a href="contact.html?plan=full-day-all#enquiry-form" class="link-accent">Enquire &rarr;</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-3); text-align: center;">
+          *All prices above are sample editable prices in INR. Walk-in single trial thali is available at the mess desk.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= SERVING SCHEDULE & DIETARY OPTIONS ======================= -->
+    <section id="serving-schedule" class="section">
+      <div class="container split-section">
+        <div>
+          <span class="eyebrow">Punctual Daily Service</span>
+          <h2>Meal Timings &amp; Serving Schedule</h2>
+          <p style="margin-bottom: var(--space-6);">
+            We align our serving windows with university morning lectures, afternoon lab breaks, and evening coaching
+            classes.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <h4>Morning Breakfast: 07:30 AM – 09:30 AM</h4>
+                <p style="font-size: 0.875rem;">Early tiffin packing available from 7:15 AM for clinical/internship
+                  students. Sunday hours extended till 10:00 AM.</p>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <h4>Afternoon Lunch: 12:30 PM – 02:30 PM</h4>
+                <p style="font-size: 0.875rem;">Freshly rolled hot phulkas served continuously at the table. Steel
+                  tiffin carriers ready for pickup by 12:15 PM.</p>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <h4>Evening Hostel Snacks: 05:00 PM – 06:15 PM</h4>
+                <p style="font-size: 0.875rem;">Freshly prepared samosa, cutlet, dhokla, sandwich, or sweet corn bhel
+                  paired with kulhad ginger tea.</p>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <h4>Homestyle Dinner: 07:45 PM – 09:30 PM</h4>
+                <p style="font-size: 0.875rem;">Comforting, light-oil dinner with dal tadka, seasonal sabzi/paneer,
+                  rice, salad, and twice-weekly warm desserts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card" style="background-color: var(--bg-sage-tint);">
+          <span class="eyebrow">Dietary Clarity</span>
+          <h3 style="margin-bottom: var(--space-3);">How Our Pure Veg &amp; Non-Veg Options Work</h3>
+          <p style="margin-bottom: var(--space-5);">
+            We respect the dietary traditions of every student household. Our kitchen and dining hall follow strict
+            separation protocols:
+          </p>
+          <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div
+              style="background: var(--bg-surface); padding: var(--space-4); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <span class="diet-badge diet-badge-veg" style="margin-bottom: var(--space-2);"><span
+                  class="fssai-dot"></span> 100% Pure Vegetarian Line</span>
+              <p style="font-size: 0.875rem;">
+                Cooked in the main vegetarian kitchen with green-coded utensils. Includes Paneer specials 3 times a
+                week, Soya/Mushroom/Kofta specials, and Jain (no onion-garlic) dal/sabzi available on prior request.
+              </p>
+            </div>
+
+            <div
+              style="background: var(--bg-surface); padding: var(--space-4); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <span class="diet-badge diet-badge-nonveg" style="margin-bottom: var(--space-2);"><span
+                  class="fssai-dot"></span> Veg + Egg / Homestyle Chicken Line</span>
+              <p style="font-size: 0.875rem;">
+                Prepared in an isolated kitchen bay using red-coded cookware and served at a dedicated counter. Includes
+                Boiled Eggs/Omelette at breakfast, Egg Curry on Mondays &amp; Thursdays, and Homestyle Chicken
+                Curry/Biryani on Wednesdays, Fridays &amp; Sundays.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FREQUENTLY ASKED QUESTIONS ======================= -->
+    <section id="faq-section" class="section bg-secondary">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Clear Mess Policies</span>
+          <h2>Frequently Asked Questions About Meal Plans</h2>
+          <p>Everything students and parents ask before joining Aangan Rasoi.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item open">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>What happens if I go home for a weekend or fall sick? Do I lose those meal days?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              Not at all. Depending on your plan, you get <strong>2 to 6 pause days per month</strong>. Simply message
+              our mess desk on WhatsApp at least 12 hours before leaving, and those unused days are automatically added
+              to your next month's validity.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Is there any limit on rotis, rice, or dal during dine-in meals?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              For all dine-in lunch and dinner meals, <strong>hot phulka rotis, steamed rice, dal tadka, and gravy are
+                unlimited</strong> for the subscribed student. Special items like Paneer gravies, Chicken curry, and
+              desserts are served in generous standard bowls with a complimentary second helping of gravy.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can I take my meal in a tiffin box if I have lab exams or late classes?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes! You can either bring your own steel tiffin box or pay a refundable ₹300 security deposit for an
+              Aangan Rasoi 4-compartment stainless steel tiffin carrier. There are zero extra packing charges for
+              subscribers.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can I try a single meal before paying for a weekly or monthly plan?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              Absolutely. We encourage every student (and visiting parents) to walk in for a trial lunch or dinner
+              thali, inspect our kitchen hygiene, and subscribe only when completely satisfied.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can I switch from Pure Veg to Veg + Non-Veg (or vice versa) mid-semester?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes, you can upgrade or switch your dietary tier or meal count at the start of any week or month by
+              speaking with the dining hall manager.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CTA BANNER ======================= -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <span class="eyebrow" style="background: rgba(255,255,255,0.14); color: #FAF6F0;">Start Your
+              Subscription</span>
+            <h2>Have Questions or Want to Book Your Trial Meal?</h2>
+            <p>Fill out our quick student enquiry form and our mess coordinator will reserve your seat for today's lunch
+              or dinner.</p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="contact.html#enquiry-form" class="btn btn-terracotta btn-lg">Enquire / Join Now</a>
+            <a href="hygiene.html" class="btn btn-outline-light btn-lg">See Hygiene Standards</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= SITE FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="brand-mark" style="background-color: var(--brand-terracotta); color: #fff;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z" />
+                <path d="M4 10h16v3a8 8 0 0 1-16 0v-3z" />
+                <path d="M3 21h18" />
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">Aangan Rasoi</span>
+              <span class="brand-tagline">Student Mess &amp; Dining</span>
+            </span>
+          </a>
+          <p>
+            Wholesome, hygienic, and affordable daily meals crafted for students living away from home. Freshly ground
+            spices, zero soda, and warm hospitality every day.
+          </p>
+          <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Separate Veg &amp; Non-Veg Kitchen
+            Lines</span>
+
+          <!-- Social Icons with Hover Effect (As Requested) -->
+          <div class="footer-social-strip" aria-label="Social media channels">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Chat on WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Subscribe on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on X Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Quick Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Classic Warmth</a></li>
+            <li><a href="home-2.html">Home 2 — Editorial Dining</a></li>
+            <li><a href="about.html">About Us &amp; Story</a></li>
+            <li><a href="meal-plans.html">Monthly &amp; Weekly Plans</a></li>
+            <li><a href="hygiene.html">Kitchen Hygiene Standards</a></li>
+            <li><a href="contact.html">Contact &amp; Trial Enquiry</a></li>
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Student Portal</h3>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+            <li><a href="meal-plans.html#serving-schedule">Daily Serving Timings</a></li>
+            <li><a href="meal-plans.html#plan-comparison">Plan Comparison Table</a></li>
+            <li><a href="meal-plans.html#faq-section">Mess Rules &amp; FAQs</a></li>
+            <li><a href="signup.html">Create Student Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Dining Hall &amp; Timings</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Plot 42, Vidya Nagar Main Road, Near University North Gate, Pune – 411007</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+91 98230 45120 (Mess Desk &amp; WhatsApp)</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Open Daily: 07:15 AM – 09:45 PM (All 7 Days)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aangan Rasoi Student Mess &amp; Hostel Food Service. All rights reserved.</span>
+        <span>Sample Pricing &amp; Editable Content for Template Demonstration.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

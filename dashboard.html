@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard — Aangan Rasoi Mess &amp; Hostel Food Service</title>
+  <meta name="description" content="Aangan Rasoi student portal for viewing weekly mess menus, managing monthly meal plans, requesting meal pause credits, and paying hostel dining fees." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <div class="dashboard-page-wrapper">
+      <!-- ======================= LEFT SIDEBAR (STICKY TOP TO BOTTOM) ======================= -->
+      <aside class="dashboard-sidebar" aria-label="Student Dashboard Navigation">
+        <div>
+          <!-- Brand Logo inside Sticky Sidebar & Drawer Close Button -->
+          <div class="dashboard-sidebar-brand">
+            <a href="index.html" class="brand-logo" aria-label="Aangan Rasoi Home">
+              <span class="brand-mark" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z"/>
+                  <path d="M4 10h16v3a8 8 0 0 1-16 0v-3z"/>
+                  <path d="M3 21h18"/>
+                </svg>
+              </span>
+              <span class="brand-text">
+                <span class="brand-name">Aangan Rasoi</span>
+                <span class="brand-tagline">Student Portal</span>
+              </span>
+            </a>
+            <!-- Close Button for Mobile & Tablet drawer -->
+            <button type="button" class="dashboard-sidebar-close" id="dashboard-sidebar-close" aria-label="Close navigation menu" title="Close Menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Student Profile Card -->
+          <div class="dashboard-user-card">
+            <div class="dashboard-user-avatar">SV</div>
+            <div>
+              <span class="dashboard-user-name">Siddharth Verma</span>
+              <span class="dashboard-user-role">Pass: AR-2026-8842</span>
+              <span class="diet-badge diet-badge-veg" style="margin-top: 4px; font-size: 0.7rem; padding: 2px 8px;">
+                <span class="fssai-dot"></span> Active 4-Meal Pass
+              </span>
+            </div>
+          </div>
+
+          <!-- Side Navigation Menu Links -->
+          <nav class="dashboard-nav-list" aria-label="Dashboard Sections">
+            <button type="button" class="dashboard-nav-btn active" data-view-target="view-overview">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span>Overview</span>
+            </button>
+
+            <button type="button" class="dashboard-nav-btn" data-view-target="view-weekly-menus">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              <span>Weekly Menus</span>
+            </button>
+
+            <button type="button" class="dashboard-nav-btn" data-view-target="view-manage-plans">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <span>Manage Meal Plan</span>
+            </button>
+
+            <button type="button" class="dashboard-nav-btn" data-view-target="view-pay-fees">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              <span>Pay Fees &amp; Invoices</span>
+            </button>
+
+            <button type="button" class="dashboard-nav-btn" data-view-target="view-pause-attendance">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Meal Pause &amp; Leave</span>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Sticky Sidebar Bottom: Buttons Moved From Header, Controls & Logout -->
+        <div class="dashboard-sidebar-footer">
+          <!-- Quick Action Buttons Moved From Header to Menu Page -->
+          <div class="dashboard-menu-actions">
+            <a href="meal-plans.html" class="btn btn-outline btn-sm btn-full">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Meal Plans</span>
+            </a>
+            <a href="index.html" class="btn btn-primary btn-sm btn-full">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Visit Website</span>
+            </a>
+          </div>
+
+          <div class="dashboard-sidebar-controls">
+            <!-- RTL Toggle Button: Same style as theme button, ONLY "RTL" text inside -->
+            <button type="button" class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL direction" title="Toggle RTL direction">RTL</button>
+
+            <!-- Theme Toggle Button -->
+            <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle Light/Dark Theme">
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Logout Button -->
+          <a href="login.html" class="dashboard-logout-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Sidebar Mobile & Tablet Backdrop -->
+      <div class="dashboard-sidebar-backdrop" id="dashboard-backdrop" aria-hidden="true"></div>
+
+      <!-- ======================= RIGHT MAIN CONTENT AREA ======================= -->
+      <section class="dashboard-main">
+        <!-- Topbar: Hamburger Button (Symbol ONLY, No Text) + Title + Status -->
+        <div class="dashboard-topbar">
+          <div style="display: flex; align-items: center; gap: var(--space-3);">
+            <!-- Hamburger menu symbol ONLY, no menu text -->
+            <button type="button" class="dashboard-hamburger-btn" id="dashboard-mobile-toggle" aria-label="Open navigation menu" title="Open Menu">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+            <div>
+              <h2 class="dashboard-welcome-heading">Student Portal</h2>
+              <span class="dashboard-welcome-sub">Vidya Nagar Mess Hall &bull; Aangan Rasoi</span>
+            </div>
+          </div>
+          <!-- Clean status badge (Meal plans & Visit website moved to menu page) -->
+          <div class="dashboard-topbar-status">
+            <span class="diet-badge diet-badge-veg" style="margin: 0;"><span class="fssai-dot"></span> Active Student Pass</span>
+          </div>
+        </div>
+
+        <!-- Header Strip -->
+        <div class="dashboard-header-strip">
+          <div>
+            <span class="eyebrow eyebrow-sage" style="margin-bottom: var(--space-2);">Vidya Nagar Mess Hall</span>
+            <h1 style="font-size: 1.85rem; margin-bottom: var(--space-1);">Welcome back, Siddharth! 👋</h1>
+            <p style="font-size: 0.925rem;">Hostel Block B • Subscribed to Complete 4-Meal Pass (100% Pure Veg)</p>
+          </div>
+          <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+            <a href="#view-weekly-menus" class="btn btn-outline btn-sm" onclick="document.querySelector('[data-view-target=\'view-weekly-menus\']').click();">Today's Menu</a>
+            <a href="#view-pay-fees" class="btn btn-primary btn-sm" onclick="document.querySelector('[data-view-target=\'view-pay-fees\']').click();">Pay Mess Fees</a>
+          </div>
+        </div>
+
+        <!-- 4 Metrics Cards -->
+        <div class="dashboard-metrics-grid">
+          <div class="metric-card">
+            <span class="metric-card-label">Active Meal Pass</span>
+            <span class="metric-card-value">Complete 4-Meal</span>
+            <span class="metric-card-sub">Breakfast, Lunch, Snacks &amp; Dinner</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-card-label">Validity Period</span>
+            <span class="metric-card-value tabular-nums">17 Days</span>
+            <span class="metric-card-sub">Valid through Nov 30, 2026</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-card-label">Meal Pause Balance</span>
+            <span class="metric-card-value tabular-nums">4 Days</span>
+            <span class="metric-card-sub">Available to carry-forward</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-card-label">Current Due</span>
+            <span class="metric-card-value tabular-nums" id="fee-due-status" style="color: var(--veg-color);">₹0 (Paid)</span>
+            <span class="metric-card-sub">Next billing: Dec 01, 2026</span>
+          </div>
+        </div>
+
+        <!-- ======================= SECTION 1: OVERVIEW ======================= -->
+        <div id="view-overview" class="dashboard-view-panel">
+          <div class="dashboard-section-box">
+            <h2>Today's Live Meal Status</h2>
+            <p>Meals are prepared fresh in our kitchen 45 minutes before each service. Present your QR code or Pass ID at the counter.</p>
+
+            <div class="today-menu-grid">
+              <article class="meal-slot-card">
+                <div class="meal-slot-img">
+                  <img src="assets/images/south-indian-morning.jpg" alt="South Indian breakfast with masala dosa, idlis and sambar" width="400" height="260" />
+                  <span class="meal-time-pill">07:30 – 09:30 AM</span>
+                </div>
+                <div class="meal-slot-body">
+                  <div class="meal-slot-header">
+                    <span class="meal-slot-type">Breakfast</span>
+                    <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Pure Veg</span>
+                  </div>
+                  <h3 class="meal-slot-title">Indori Poha &amp; Kulhad Chai</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3);">Fluffy poha with roasted peanuts, fresh coriander, steamed sprouts, and adrak-elaichi chai.</p>
+                  <div class="meal-slot-footer">
+                    <span style="color: var(--veg-color); font-weight: 700;">✓ Served</span>
+                    <span>Dine-in Taken</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="meal-slot-card">
+                <div class="meal-slot-img">
+                  <img src="assets/images/lunch-thali-mess.jpg" alt="Authentic 5-compartment stainless steel mess lunch thali" width="400" height="260" />
+                  <span class="meal-time-pill">12:30 – 02:30 PM</span>
+                </div>
+                <div class="meal-slot-body">
+                  <div class="meal-slot-header">
+                    <span class="meal-slot-type">Lunch Thali</span>
+                    <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Unlimited Rotis</span>
+                  </div>
+                  <h3 class="meal-slot-title">Rajma Masala &amp; Jeera Rice</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3);">Slow-cooked Jammu rajma, aloo gobi, 4 hot tawa phulkas, jeera rice, boondi raita, and salad.</p>
+                  <div class="meal-slot-footer">
+                    <span style="color: var(--brand-terracotta); font-weight: 700;">● Active Serving</span>
+                    <span>Counter Open</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="meal-slot-card">
+                <div class="meal-slot-img">
+                  <img src="assets/images/hostel-snacks-samosa.jpg" alt="Evening samosas and hot masala tea in clay kulhads" width="400" height="260" />
+                  <span class="meal-time-pill">05:00 – 06:15 PM</span>
+                </div>
+                <div class="meal-slot-body">
+                  <div class="meal-slot-header">
+                    <span class="meal-slot-type">Hostel Snacks</span>
+                    <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Fresh Batch</span>
+                  </div>
+                  <h3 class="meal-slot-title">Crispy Samosa &amp; Adrak Tea</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3);">2 hot potato-peas samosas, green mint chutney, tamarind dip, and steaming ginger chai.</p>
+                  <div class="meal-slot-footer">
+                    <span>Upcoming at 5:00 PM</span>
+                    <span>Prep at 4:30 PM</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="meal-slot-card">
+                <div class="meal-slot-img">
+                  <img src="assets/images/dinner-homestyle.jpg" alt="Comforting dinner with kadai paneer, dal fry and chapatis" width="400" height="260" />
+                  <span class="meal-time-pill">07:45 – 09:30 PM</span>
+                </div>
+                <div class="meal-slot-body">
+                  <div class="meal-slot-header">
+                    <span class="meal-slot-type">Comfort Dinner</span>
+                    <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Sweet Included</span>
+                  </div>
+                  <h3 class="meal-slot-title">Lasooni Dal &amp; Matar Paneer</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3);">Yellow dal tadka with ghee garlic, fresh matar paneer, 4 soft whole-wheat rotis, rice, and kheer.</p>
+                  <div class="meal-slot-footer">
+                    <span>Upcoming at 7:45 PM</span>
+                    <span>Comfort Dinner</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================= SECTION 2: WEEKLY MENUS ======================= -->
+        <div id="view-weekly-menus" class="dashboard-view-panel" style="display: none;">
+          <div class="dashboard-section-box">
+            <h2>Weekly Mess Menus (Rotating 7-Day Schedule)</h2>
+            <p>Our weekly rotation guarantees balanced student nutrition without repeating the same gravies and sabzis.</p>
+
+            <div class="menu-tabs-bar">
+              <div class="day-selector" role="tablist" aria-label="Select day of the week">
+                <button type="button" class="day-btn active" data-menu-day="monday" role="tab">Monday</button>
+                <button type="button" class="day-btn" data-menu-day="wednesday" role="tab">Wednesday</button>
+                <button type="button" class="day-btn" data-menu-day="friday" role="tab">Friday</button>
+                <button type="button" class="day-btn" data-menu-day="sunday" role="tab">Sunday Feast</button>
+              </div>
+              <span class="pill-tag" id="active-menu-day-label">Monday — Fresh Start Homely Spread</span>
+            </div>
+
+            <div class="table-responsive">
+              <table class="comparison-table" aria-label="Complete 7-day student mess schedule">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Breakfast (07:30 – 09:30 AM)</th>
+                    <th>Lunch (12:30 – 02:30 PM)</th>
+                    <th>Snacks (05:00 – 06:15 PM)</th>
+                    <th>Dinner (07:45 – 09:30 PM)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Monday</strong></td>
+                    <td>Indori Poha, Sprouts &amp; Masala Chai</td>
+                    <td>Jammu Rajma Masala, Aloo Gobi, Jeera Rice, Phulkas</td>
+                    <td>Crispy Veg Cutlet &amp; Ginger Tea</td>
+                    <td>Lasooni Dal Tadka, Matar Paneer &amp; Seviyan Kheer</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Tuesday</strong></td>
+                    <td>Upma, Medu Vada, Sambar &amp; Filter Coffee</td>
+                    <td>Kala Chana Rasa, Cabbage Poriyal, Toor Dal, Curd</td>
+                    <td>Masala Pav &amp; Mint Chutney</td>
+                    <td>Dal Makhani, Mix Veg Jalfrezi, Jeera Rice &amp; Papad</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Wednesday</strong></td>
+                    <td>Crisp Masala Dosa, Idli &amp; Coconut Chutney</td>
+                    <td>Amritsari Chole, Bhature / Phulka, Pulao &amp; Chaas</td>
+                    <td>Baked Samosa Chaat &amp; Tea</td>
+                    <td>Palak Paneer / Homestyle Chicken, Dal Fry</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Thursday</strong></td>
+                    <td>Aloo Puri Bhaji &amp; Elaichi Tea</td>
+                    <td>Lobia Curry, Baingan Bharta, Moong Dal, Rotis</td>
+                    <td>Poha Chivda Bhel &amp; Iced Tea</td>
+                    <td>Yellow Dal Tadka, Anda/Soyabean Bhurji &amp; Custard</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Friday</strong></td>
+                    <td>Stuffed Aloo Paratha, Curd &amp; Pickle</td>
+                    <td>Gujarati Kadhi Pakora, Kurkuri Bhindi &amp; Dal</td>
+                    <td>Sweet Corn Chaat &amp; Chai</td>
+                    <td>Subz Dum Biryani / Chicken Biryani &amp; Halwa</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Saturday</strong></td>
+                    <td>Mysore Masala Uttapam &amp; Sambar</td>
+                    <td>Lauki Kofta Curry, Dal Tadka, Rice, Kachumber</td>
+                    <td>Veg Hakka Noodles &amp; Tea</td>
+                    <td>Panchmel Dal, Methi Matar Malai &amp; Phulkas</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sunday</strong></td>
+                    <td>Chole-Puri &amp; Kesar Sooji Halwa</td>
+                    <td><strong>Grand Feast:</strong> Paneer Lababdar / Chicken Masala, Naan &amp; Gulab Jamun</td>
+                    <td>Grilled Chutney Sandwich &amp; Tea</td>
+                    <td>Light Ghee Moong Dal Khichdi &amp; Kadhi</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================= SECTION 3: MANAGE MEAL PLAN ======================= -->
+        <div id="view-manage-plans" class="dashboard-view-panel" style="display: none;">
+          <div class="dashboard-section-box">
+            <h2>Manage Your Meal Plan &amp; Preferences</h2>
+            <p>Upgrade your tier, switch dietary lines, or convert dine-in to insulated stainless steel tiffin pickup.</p>
+
+            <div class="form-grid-2" style="margin-bottom: var(--space-6);">
+              <div style="background-color: var(--bg-secondary); padding: var(--space-5); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
+                <span class="diet-badge diet-badge-veg" style="margin-bottom: var(--space-2);"><span class="fssai-dot"></span> Current Active Plan</span>
+                <h3 style="font-size: 1.3rem; margin-bottom: var(--space-1);">Complete 4-Meal Pass</h3>
+                <p style="font-size: 0.9rem; margin-bottom: var(--space-3);">Breakfast, Lunch, Evening Snacks &amp; Dinner • ₹3,600 / month*</p>
+                <ul class="plan-features" style="font-size: 0.85rem; margin-bottom: var(--space-4);">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited hot rotis &amp; dal</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 6 days pause carry-forward balance</li>
+                </ul>
+              </div>
+
+              <!-- Switch Plan Form -->
+              <div>
+                <form id="plan-change-form">
+                  <div class="form-group">
+                    <label for="change-plan-select" class="form-label">Switch to Another Meal Plan</label>
+                    <select id="change-plan-select" class="form-control" required>
+                      <option value="Complete 4-Meal Pass (₹3,600/mo*)">Complete 4-Meal Pass (Current - ₹3,600/mo*)</option>
+                      <option value="Three-Meal Daily Pass (₹3,300/mo*)">Three-Meal Pass: Breakfast, Lunch, Dinner (₹3,300/mo*)</option>
+                      <option value="Two-Meal Core Pass (₹2,850/mo*)">Two-Meal Core: Lunch + Dinner (₹2,850/mo*)</option>
+                      <option value="Morning & Night Pass (₹2,400/mo*)">Morning &amp; Night: Breakfast + Dinner (₹2,400/mo*)</option>
+                      <option value="Single Thali Pass (₹1,600/mo*)">Single Thali: Daily Lunch or Dinner (₹1,600/mo*)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="change-diet-select" class="form-label">Dietary Preference</label>
+                    <select id="change-diet-select" class="form-control">
+                      <option value="pure-veg">100% Pure Vegetarian Line</option>
+                      <option value="veg-egg">Veg + Egg Line</option>
+                      <option value="non-veg">Veg + Egg / Non-Veg Line (4x/wk)</option>
+                      <option value="jain">Jain (No Onion-Garlic)</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-outline btn-full">Apply Plan Switch</button>
+                  <div id="plan-change-banner" class="form-status-banner" style="display: none;"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================= SECTION 4: PAY FEES & INVOICES ======================= -->
+        <div id="view-pay-fees" class="dashboard-view-panel" style="display: none;">
+          <div class="dashboard-section-box">
+            <h2>Pay Mess Fees &amp; Download Receipts</h2>
+            <p>Pay monthly mess subscriptions conveniently via UPI, QR code, netbanking, or debit/credit card with instant receipt generation.</p>
+
+            <div class="form-grid-2" style="margin-bottom: var(--space-8);">
+              <!-- Payment Form -->
+              <div style="background-color: var(--bg-secondary); padding: var(--space-6); border-radius: var(--radius-xl); border: 1px solid var(--border-subtle);">
+                <span class="eyebrow eyebrow-sage" style="margin-bottom: var(--space-2);">Next Billing Cycle</span>
+                <h3 style="font-size: 1.4rem; margin-bottom: var(--space-1);">December 2026 Monthly Pass</h3>
+                <div class="plan-price" style="margin-block: var(--space-3);">
+                  <span class="price-currency">₹</span>
+                  <span class="price-amount">3,600</span>
+                  <span class="price-period">/ month (30 days)</span>
+                </div>
+
+                <form id="fee-payment-form">
+                  <div class="form-group">
+                    <span class="form-label">Select Payment Method</span>
+                    <div class="radio-pills" role="radiogroup">
+                      <label class="radio-pill-label">
+                        <input type="radio" name="payment_method" value="UPI (GPay / PhonePe / Paytm)" checked />
+                        <span>UPI / QR</span>
+                      </label>
+                      <label class="radio-pill-label">
+                        <input type="radio" name="payment_method" value="Net Banking" />
+                        <span>Net Banking</span>
+                      </label>
+                      <label class="radio-pill-label">
+                        <input type="radio" name="payment_method" value="Debit / Credit Card" />
+                        <span>Card</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="upi-vpa" class="form-label">Enter UPI ID or Phone</label>
+                    <input type="text" id="upi-vpa" class="form-control" placeholder="e.g. siddharth@okhdfcbank" />
+                  </div>
+
+                  <button type="submit" class="btn btn-terracotta btn-lg btn-full">Pay ₹3,600 Mess Fee</button>
+                  <div id="fee-status-banner" class="form-status-banner" style="display: none;"></div>
+                </form>
+              </div>
+
+              <!-- Payment Invoices Table -->
+              <div>
+                <h3 style="font-size: 1.15rem; margin-bottom: var(--space-3);">Past Payment Invoices</h3>
+                <div class="table-responsive">
+                  <table class="comparison-table" style="min-width: 0;" aria-label="Past Payment Invoices">
+                    <thead>
+                      <tr>
+                        <th>Month</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Receipt</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Nov 2026</strong></td>
+                        <td class="tabular-nums">₹3,600</td>
+                        <td><span style="color: var(--veg-color); font-weight: 700;">Paid</span></td>
+                        <td><button type="button" class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;" onclick="alert('Downloading Receipt: AR-INV-2026-11 (Sample Demonstration)');">PDF</button></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Oct 2026</strong></td>
+                        <td class="tabular-nums">₹3,600</td>
+                        <td><span style="color: var(--veg-color); font-weight: 700;">Paid</span></td>
+                        <td><button type="button" class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;" onclick="alert('Downloading Receipt: AR-INV-2026-10 (Sample Demonstration)');">PDF</button></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Sep 2026</strong></td>
+                        <td class="tabular-nums">₹3,600</td>
+                        <td><span style="color: var(--veg-color); font-weight: 700;">Paid</span></td>
+                        <td><button type="button" class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;" onclick="alert('Downloading Receipt: AR-INV-2026-09 (Sample Demonstration)');">PDF</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================= SECTION 5: MEAL PAUSE & ATTENDANCE ======================= -->
+        <div id="view-pause-attendance" class="dashboard-view-panel" style="display: none;">
+          <div class="dashboard-section-box">
+            <h2>Log Meal Pause (Going Home / Vacation)</h2>
+            <p>Visiting family or taking leave? Log your absence at least 12 hours prior so your meals are paused and days are credited to next month.</p>
+
+            <form id="meal-pause-form" style="max-width: 600px;">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="pause-start-date" class="form-label">Departure Date <span class="req">*</span></label>
+                  <input type="date" id="pause-start-date" class="form-control" required />
+                </div>
+                <div class="form-group">
+                  <label for="pause-end-date" class="form-label">Return Date <span class="req">*</span></label>
+                  <input type="date" id="pause-end-date" class="form-control" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pause-reason" class="form-label">Reason for Absence</label>
+                <select id="pause-reason" class="form-control">
+                  <option value="Home Visit">Home Visit / Weekend</option>
+                  <option value="Exam Preparation / Study Leave">Exam Prep / Study Leave</option>
+                  <option value="Medical Rest">Medical Rest</option>
+                  <option value="College Fest / Trip">College Fest / Trip</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg">Submit Meal Pause Request</button>
+              <div id="pause-status-banner" class="form-status-banner" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

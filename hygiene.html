@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitchen Hygiene &amp; Food Preparation Standards — Aangan Rasoi Student Mess</title>
+  <meta name="description"
+    content="Explore Aangan Rasoi's practical, transparent kitchen hygiene routines: RO+UV water, fresh ingredient sourcing, staff grooming, 3-sink hot sanitization, and open-kitchen walk-in access." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ======================= STICKY NAVBAR ======================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Aangan Rasoi Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z" />
+            <path d="M4 10h16v3a8 8 0 0 1-16 0v-3z" />
+            <path d="M3 21h18" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Aangan Rasoi</span>
+          <span class="brand-tagline">Student Mess &amp; Dining</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">Home 1 — Classic Homely</span>
+                <span class="dropdown-item-desc">Warm hospitality &amp; full mess experience</span>
+              </a>
+              <a href="home-2.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">Home 2 — Editorial Dining</span>
+                <span class="dropdown-item-desc">Menu-first showcase &amp; kitchen story</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="meal-plans.html" class="nav-link">Meal Plans</a>
+          </li>
+          <li class="nav-item">
+            <a href="hygiene.html" class="nav-link active">Hygiene</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+
+          <!-- Mobile Drawer Footer Actions -->
+          <li class="mobile-nav-footer">
+            <a href="signup.html" class="btn btn-terracotta btn-full">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- RTL Toggle Button: Same style as theme button, ONLY "RTL" text inside -->
+        <button type="button" class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL direction"
+          title="Toggle RTL direction">RTL</button>
+
+        <!-- Theme Toggle Button -->
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle Light/Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="signup.html" class="nav-signup-btn nav-signup-desktop">Sign Up</a>
+
+        <button type="button" class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav-menu"
+          aria-label="Toggle Navigation Menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================= PAGE HERO ======================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner center">
+          <span class="eyebrow">Open-Door Kitchen Transparency</span>
+          <h1>Cleanliness You Can See, Smell, and Verify Yourself</h1>
+          <p class="lead">
+            For students eating with us every day, kitchen hygiene isn't a marketing slogan—it's what keeps you
+            energetic through lectures and exams. Here is how we maintain a spotless, home-like cooking environment
+            every single day.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 1. KITCHEN CLEANLINESS & PREPARATION SHOWCASE ======================= -->
+    <section class="section">
+      <div class="container split-section">
+        <div>
+          <span class="eyebrow eyebrow-sage">Our Core Hygiene Philosophy</span>
+          <h2>An Open Kitchen Policy for Students and Parents</h2>
+          <p class="lead" style="margin-bottom: var(--space-4);">
+            We believe the best proof of cleanliness is an unlocked kitchen door. Any student or visiting parent can
+            request a hairnet at the reception counter and inspect our vegetable washing bay, dry store, and cooking
+            line between 10:00 AM and 8:00 PM.
+          </p>
+          <p style="margin-bottom: var(--space-6);">
+            Our kitchen floor is laid with non-porous anti-skid tiles, food-grade 304 stainless steel prep tables,
+            commercial chimney exhausts that prevent grease buildup, and pest-screened ventilation windows.
+          </p>
+
+          <div class="checklist-grid">
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <h4>304-Grade Steel Counters</h4>
+                <p style="font-size: 0.84rem;">Zero wooden chopping blocks that trap moisture or bacteria.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <h4>Fresh Batch Cooking Only</h4>
+                <p style="font-size: 0.84rem;">No gravies carried over to the next day's meal service.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <h4>Color-Coded Zones</h4>
+                <p style="font-size: 0.84rem;">Strict physical separation between Pure Veg and Egg/Non-Veg bays.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div>
+                <h4>Zero Artificial Additives</h4>
+                <p style="font-size: 0.84rem;">No baking soda in dals, no synthetic food colors, and no MSG.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-visual-collage">
+          <div class="collage-img-main">
+            <img src="assets/images/kitchen-hygiene-prep.jpg"
+              alt="Spotless commercial hostel mess kitchen with cooks in clean white aprons and hairnets preparing fresh vegetables"
+              width="500" height="620" />
+          </div>
+          <div class="collage-img-secondary">
+            <img src="assets/images/mess-kitchen-roti.jpg"
+              alt="Homestyle mess cook puffing fresh whole-wheat rotis on an iron tawa" width="420" height="480" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 6 PILLARS OF KITCHEN & FOOD HYGIENE ======================= -->
+    <section id="ingredient-sourcing" class="section bg-secondary">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">End-to-End Cleanliness</span>
+          <h2>6 Pillars of Our Daily Hygiene Standard</h2>
+          <p>From 6:00 AM vegetable delivery to 10:00 PM deep floor scrubbing, every stage follows a documented
+            checklist.</p>
+        </div>
+
+        <div class="features-grid-3">
+          <!-- 1. Ingredient Sourcing & Storage -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+              </svg>
+            </div>
+            <h3>1. Ingredient Sourcing &amp; Storage</h3>
+            <p>
+              Vegetables arrive fresh every morning at 6:00 AM—never stored in wilted heaps for days. Dry grains,
+              unpolished lentils, and MP Sharbati wheat flour are stored off the floor in airtight food-grade steel bins
+              with First-In, First-Out (FIFO) date labels.
+            </p>
+          </div>
+
+          <!-- 2. Food Preparation Practices -->
+          <div class="feature-card">
+            <div class="feature-icon terracotta">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h3>2. Triple-Wash Food Prep</h3>
+            <p>
+              All leafy greens, tubers, and vegetables undergo a 3-stage wash: running water rinse to remove soil, a
+              15-minute soak in mild salted/turmeric water, and a final rinse in filtered RO water before chopping on
+              color-coded food-safe boards.
+            </p>
+          </div>
+
+          <!-- 3. Staff Hygiene Practices -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3>3. Staff Grooming &amp; Discipline</h3>
+            <p>
+              Every cook, helper, and server begins their shift with a mandatory handwash, trimmed-nail check, clean
+              washed cotton apron, hairnet/cap, and food-grade gloves for salad cutting and serving. Any staff member
+              with a cold or fever is given paid rest away from the kitchen.
+            </p>
+          </div>
+
+          <!-- 4. Safe Drinking Water & Sanitation -->
+          <div class="feature-card">
+            <div class="feature-icon terracotta">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>4. Safe RO + UV Water System</h3>
+            <p>
+              We use commercial RO + UV purified water not only in the dining hall drinking dispensers, but also for
+              kneading chapati dough, boiling dal and rice, and blending chutneys and buttermilk—protecting students
+              during monsoon months.
+            </p>
+          </div>
+
+          <!-- 5. Utensil & Thali Sanitization -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3>5. 3-Sink Hot Water Dishwashing</h3>
+            <p>
+              Stainless steel thalis, katoris, tumblers, and tiffin boxes pass through a 3-stage wash: high-pressure
+              pre-rinse, food-safe degreasing scrub, and a final hot-water sanitizing rinse before air-drying on
+              elevated steel racks.
+            </p>
+          </div>
+
+          <!-- 6. Food Handling & Serving Standards -->
+          <div class="feature-card">
+            <div class="feature-icon terracotta">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              </svg>
+            </div>
+            <h3>6. Covered Bain-Marie Serving</h3>
+            <p>
+              Prepared food is held in temperature-controlled stainless steel bain-maries with lids, served using
+              long-handled ladles by gloved staff. Rotis are transferred directly from the iron tawa into clean
+              unbleached cotton cloth baskets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= DAILY CLEANING ROUTINES SCHEDULE ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow eyebrow-sage">Daily Sanitation Clock</span>
+          <h2>Our 4-Shift Daily Kitchen Cleaning Routine</h2>
+          <p>Cleanliness is maintained continuously between every meal service, not just once at the end of the night.
+          </p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="comparison-table" aria-label="Daily Kitchen Cleaning Schedule">
+            <thead>
+              <tr>
+                <th>Time Window</th>
+                <th>Shift Phase</th>
+                <th>Cleaning &amp; Sanitation Tasks Performed</th>
+                <th>Checked By</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tabular-nums"><strong>06:00 AM – 06:45 AM</strong></td>
+                <td>Pre-Breakfast Sanitization</td>
+                <td>Sanitizing steel prep tables, checking RO water TDS log, inspecting staff aprons/hairnets, and
+                  triple-washing morning vegetables.</td>
+                <td>Morning Kitchen Supervisor</td>
+              </tr>
+              <tr>
+                <td class="tabular-nums"><strong>10:00 AM – 11:00 AM</strong></td>
+                <td>Post-Breakfast Reset</td>
+                <td>Washing breakfast vessels, mopping dining hall tables &amp; floors with mild eco-disinfectant, and
+                  prepping lunch cutting boards.</td>
+                <td>Dining Hall Steward</td>
+              </tr>
+              <tr>
+                <td class="tabular-nums"><strong>03:00 PM – 04:15 PM</strong></td>
+                <td>Afternoon Deep Wipe</td>
+                <td>Degreasing stove tops &amp; tawa stations, clearing wet biodegradable waste into sealed bins, and
+                  3-sink hot rinse of all lunch thalis.</td>
+                <td>Head Cook &amp; Steward</td>
+              </tr>
+              <tr>
+                <td class="tabular-nums"><strong>10:00 PM – 11:00 PM</strong></td>
+                <td>Nightly Kitchen Shutdown</td>
+                <td>Full floor scrubbing with hot water &amp; degreaser, sealing dry ration bins, cleaning drain traps,
+                  and drying all utensils on elevated racks.</td>
+                <td>Mess Manager Sign-Off</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= REALISTIC HYGIENE COMMITMENTS ======================= -->
+    <section class="section bg-sage">
+      <div class="container split-section">
+        <div class="hero-image-frame">
+          <img src="assets/images/lunch-thali-mess.jpg"
+            alt="Clean stainless steel thali with freshly cooked yellow dal tadka, phulkas, jeera rice and fresh salad"
+            width="700" height="540" loading="lazy" />
+        </div>
+
+        <div>
+          <span class="eyebrow">Our Honest Promise to Students</span>
+          <h2>5 Realistic Commitments We Stand Behind Every Day</h2>
+          <p style="margin-bottom: var(--space-5);">
+            We don't make exaggerated claims—we follow practical, everyday kitchen discipline that any student can
+            verify at our counter:
+          </p>
+          <ul class="plan-features" style="margin-bottom: var(--space-6);">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Zero Re-Used Frying Oil:</strong> Oil used for occasional snacks or puris is never topped up
+                and reused across days.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Transparent Branded Rations:</strong> We use standard household-grade oil, spices, and
+                grains that we openly display in our dry store.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Same Food for Staff &amp; Founders:</strong> Our kitchen team and mess managers eat from the
+                exact same vessels served to students.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Plastic-Free Hot Serving:</strong> We never pour hot dal, sambar, or tea into thin plastic
+                bags or styrofoam cups.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Immediate Replacement Guarantee:</strong> If any dish ever feels cold or over-salted, we
+                replace it at the counter without hesitation.</span>
+            </li>
+          </ul>
+          <a href="contact.html#enquiry-form" class="btn btn-primary">Schedule a Kitchen Visit &amp; Trial Meal</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= SITE FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="brand-mark" style="background-color: var(--brand-terracotta); color: #fff;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z" />
+                <path d="M4 10h16v3a8 8 0 0 1-16 0v-3z" />
+                <path d="M3 21h18" />
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">Aangan Rasoi</span>
+              <span class="brand-tagline">Student Mess &amp; Dining</span>
+            </span>
+          </a>
+          <p>
+            Wholesome, hygienic, and affordable daily meals crafted for students living away from home. Freshly ground
+            spices, zero soda, and warm hospitality every day.
+          </p>
+          <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Separate Veg &amp; Non-Veg Kitchen
+            Lines</span>
+
+          <!-- Social Icons with Hover Effect (As Requested) -->
+          <div class="footer-social-strip" aria-label="Social media channels">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Chat on WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Subscribe on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on X Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Quick Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Classic Warmth</a></li>
+            <li><a href="home-2.html">Home 2 — Editorial Dining</a></li>
+            <li><a href="about.html">About Us &amp; Story</a></li>
+            <li><a href="meal-plans.html">Monthly &amp; Weekly Plans</a></li>
+            <li><a href="hygiene.html">Kitchen Hygiene Standards</a></li>
+            <li><a href="contact.html">Contact &amp; Trial Enquiry</a></li>
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Student Portal</h3>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+            <li><a href="meal-plans.html#serving-schedule">Daily Serving Timings</a></li>
+            <li><a href="meal-plans.html#plan-comparison">Plan Comparison Table</a></li>
+            <li><a href="meal-plans.html#faq-section">Mess Rules &amp; FAQs</a></li>
+            <li><a href="signup.html">Create Student Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Dining Hall &amp; Timings</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Plot 42, Vidya Nagar Main Road, Near University North Gate, Pune – 411007</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+91 98230 45120 (Mess Desk &amp; WhatsApp)</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Open Daily: 07:15 AM – 09:45 PM (All 7 Days)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aangan Rasoi Student Mess &amp; Hostel Food Service. All rights reserved.</span>
+        <span>Sample Pricing &amp; Editable Content for Template Demonstration.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

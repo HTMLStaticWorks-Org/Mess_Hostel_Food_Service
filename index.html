@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aangan Rasoi — Homely Student Mess &amp; Hostel Food Service | Home 1</title>
+  <meta name="description"
+    content="Freshly prepared, hygienic, homely daily meals for college and hostel students. Transparent monthly and weekly meal plans covering breakfast, lunch, snacks, and dinner." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ======================= STICKY NAVBAR ======================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Aangan Rasoi Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z" />
+            <path d="M4 10h16v3a8 8 0 0 1-16 0v-3z" />
+            <path d="M3 21h18" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Aangan Rasoi</span>
+          <span class="brand-tagline">Student Mess &amp; Dining</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li class="nav-item dropdown">
+            <button type="button" class="nav-link dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a href="index.html" class="dropdown-item active" role="menuitem">
+                <span class="dropdown-item-title">Home 1 — Classic Homely</span>
+                <span class="dropdown-item-desc">Warm hospitality &amp; full mess experience</span>
+              </a>
+              <a href="home-2.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">Home 2 — Editorial Dining</span>
+                <span class="dropdown-item-desc">Menu-first showcase &amp; kitchen story</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="meal-plans.html" class="nav-link">Meal Plans</a>
+          </li>
+          <li class="nav-item">
+            <a href="hygiene.html" class="nav-link">Hygiene</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+
+          <!-- Mobile Drawer Footer Actions -->
+          <li class="mobile-nav-footer">
+            <a href="signup.html" class="btn btn-terracotta btn-full">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- RTL Toggle Button: Same style as theme button, ONLY "RTL" text inside -->
+        <button type="button" class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL direction"
+          title="Toggle RTL direction">RTL</button>
+
+        <!-- Theme Toggle Button -->
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Toggle Light/Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="signup.html" class="nav-signup-btn nav-signup-desktop">Sign Up</a>
+
+        <button type="button" class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav-menu"
+          aria-label="Toggle Navigation Menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================= HERO SECTION ======================= -->
+    <section class="hero-home-1">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              aria-hidden="true">
+              <path d="M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z" />
+            </svg>
+            Homely Student Dining &amp; Daily Mess
+          </span>
+          <h1>Warm, freshly cooked meals that taste like <em>home</em>, every single day.</h1>
+          <p class="lead">
+            Living away from family shouldn't mean surviving on instant noodles or oily takeout. We prepare wholesome
+            breakfast, lunch, evening chai-snacks, and dinner with chakki-milled atta, farm-fresh vegetables, and zero
+            artificial additives.
+          </p>
+          <div class="hero-cta-group">
+            <a href="meal-plans.html" class="btn btn-primary btn-lg">
+              Explore Meal Plans
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#todays-menu" class="btn btn-outline btn-lg">See Today's Menu</a>
+          </div>
+
+          <div class="hero-trust-strip">
+            <div class="trust-stat">
+              <span class="trust-stat-val tabular-nums">4 Meals / Day</span>
+              <span class="trust-stat-label">Breakfast, Lunch, Snacks &amp; Dinner</span>
+            </div>
+            <div class="trust-stat">
+              <span class="trust-stat-val">Zero Soda</span>
+              <span class="trust-stat-label">No palm oil or artificial colors</span>
+            </div>
+            <div class="trust-stat">
+              <span class="trust-stat-val tabular-nums">7-Day Rotation</span>
+              <span class="trust-stat-label">New seasonal menu every week</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="assets/images/hero-thali.jpg"
+              alt="Freshly prepared Indian student mess lunch thali with yellow dal tadka, aloo gobi, jeera rice, hot phulkas, salad and raita"
+              width="800" height="680" />
+          </div>
+
+          <div class="hero-floating-card top-left">
+            <div class="floating-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="floating-card-title">Open-Kitchen Hygiene</div>
+              <div class="floating-card-sub">Students welcome to inspect anytime</div>
+            </div>
+          </div>
+
+          <div class="hero-floating-card bottom-right">
+            <div class="floating-icon terracotta">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="floating-card-title">Hot Tawa Phulkas</div>
+              <div class="floating-card-sub">Served fresh off the stove at dining</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= TODAY'S MENU PREVIEW ======================= -->
+    <section id="todays-menu" class="section bg-secondary">
+      <div class="container">
+        <div class="section-header-split">
+          <div class="header-copy">
+            <span class="eyebrow eyebrow-sage">Daily Mess Schedule</span>
+            <h2>Today's Kitchen Menu Preview</h2>
+            <p>Every meal is cooked fresh 45 minutes before serving time. Switch between days below to preview our
+              balanced rotating student menu.</p>
+          </div>
+          <a href="meal-plans.html#serving-schedule" class="btn btn-outline btn-sm">View Full Timings &amp; Rules</a>
+        </div>
+
+        <div class="menu-tabs-bar">
+          <div class="day-selector" role="tablist" aria-label="Select day of the week">
+            <button type="button" class="day-btn active" data-menu-day="monday" role="tab">Monday</button>
+            <button type="button" class="day-btn" data-menu-day="wednesday" role="tab">Wednesday</button>
+            <button type="button" class="day-btn" data-menu-day="friday" role="tab">Friday</button>
+            <button type="button" class="day-btn" data-menu-day="sunday" role="tab">Sunday Feast</button>
+          </div>
+          <span class="pill-tag" id="active-menu-day-label">Monday — Fresh Start Homely Spread</span>
+        </div>
+
+        <div class="today-menu-grid">
+          <!-- Breakfast Card -->
+          <article class="meal-slot-card" data-meal-slot="breakfast">
+            <div class="meal-slot-img">
+              <img src="assets/images/south-indian-morning.jpg"
+                alt="Morning hostel breakfast spread with crispy masala dosa, idli, vada and sambar" width="400"
+                height="260" loading="lazy" />
+              <span class="meal-time-pill">07:30 AM – 09:30 AM</span>
+            </div>
+            <div class="meal-slot-body">
+              <div class="meal-slot-header">
+                <span class="meal-slot-type">Breakfast</span>
+                <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Veg + Egg Opt</span>
+              </div>
+              <h3 class="meal-slot-title">Indori Poha, Jalebi &amp; Masala Chai</h3>
+              <ul class="meal-items-list">
+                <li>Fluffy Kanda-Batata Poha with roasted peanuts &amp; fresh coriander</li>
+                <li>2 Boiled Eggs or Sprouted Moong Chaat (protein option)</li>
+                <li>Steaming Adrak-Elaichi Chai or Hot Filter Coffee</li>
+              </ul>
+              <div class="meal-slot-footer">
+                <span class="meal-slot-note">Unlimited Poha &amp; Chai refill</span>
+                <strong>Freshly Prepared</strong>
+              </div>
+            </div>
+          </article>
+
+          <!-- Lunch Card -->
+          <article class="meal-slot-card" data-meal-slot="lunch">
+            <div class="meal-slot-img">
+              <img src="assets/images/lunch-thali-mess.jpg"
+                alt="Authentic 5-compartment stainless steel Indian hostel mess lunch thali with dal, rice, aloo gobi and rotis"
+                width="400" height="260" loading="lazy" />
+              <span class="meal-time-pill">12:30 PM – 02:30 PM</span>
+            </div>
+            <div class="meal-slot-body">
+              <div class="meal-slot-header">
+                <span class="meal-slot-type">Lunch Thali</span>
+                <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Pure Homely</span>
+              </div>
+              <h3 class="meal-slot-title">Punjabi Rajma Masala &amp; Jeera Rice Thali</h3>
+              <ul class="meal-items-list">
+                <li>Slow-simmered Jammu Rajma in home-ground tomato-ginger gravy</li>
+                <li>Seasonal Aloo Gobi Adraki + 4 Hot Tawa Phulkas with desi ghee</li>
+                <li>Steamed Basmati Jeera Rice, Boondi Raita &amp; Kachumber Salad</li>
+              </ul>
+              <div class="meal-slot-footer">
+                <span class="meal-slot-note">Unlimited Rice, Dal/Gravy &amp; Rotis</span>
+                <strong>Dine-in / Tiffin</strong>
+              </div>
+            </div>
+          </article>
+
+          <!-- Evening Snacks Card -->
+          <article class="meal-slot-card" data-meal-slot="snacks">
+            <div class="meal-slot-img">
+              <img src="assets/images/hostel-snacks-samosa.jpg"
+                alt="Evening tea time hostel snacks with hot crispy samosas, cutlets and kulhad chai" width="400"
+                height="260" loading="lazy" />
+              <span class="meal-time-pill">05:00 PM – 06:15 PM</span>
+            </div>
+            <div class="meal-slot-body">
+              <div class="meal-slot-header">
+                <span class="meal-slot-type">Evening Snacks</span>
+                <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> 100% Veg</span>
+              </div>
+              <h3 class="meal-slot-title">Crispy Samosa &amp; Ginger Kulhad Tea</h3>
+              <ul class="meal-items-list">
+                <li>2 Golden Potato-Peas Samosas &amp; Beetroot Cutlets (low oil)</li>
+                <li>Fresh Pudina-Coriander Green Chutney &amp; Tamarind Dip</li>
+                <li>Hot Ginger Cardamom Tea or Lemon Iced Tea</li>
+              </ul>
+              <div class="meal-slot-footer">
+                <span class="meal-slot-note">Prepared fresh at 4:45 PM</span>
+                <strong>Post-Lecture Fuel</strong>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dinner Card -->
+          <article class="meal-slot-card" data-meal-slot="dinner">
+            <div class="meal-slot-img">
+              <img src="assets/images/dinner-homestyle.jpg"
+                alt="Comforting homestyle hostel dinner with kadai paneer, dal fry, hot tawa chapatis and rice"
+                width="400" height="260" loading="lazy" />
+              <span class="meal-time-pill">07:45 PM – 09:30 PM</span>
+            </div>
+            <div class="meal-slot-body">
+              <div class="meal-slot-header">
+                <span class="meal-slot-type">Dinner</span>
+                <span class="diet-badge diet-badge-nonveg"><span class="fssai-dot"></span> Veg / Egg Opt</span>
+              </div>
+              <h3 class="meal-slot-title">Lasooni Dal Tadka, Matar Paneer &amp; Phulkas</h3>
+              <ul class="meal-items-list">
+                <li>Homestyle Yellow Toor-Moong Dal with desi ghee garlic tempering</li>
+                <li>Fresh Matar Paneer (or Egg Curry for Non-Veg subscribers)</li>
+                <li>4 Soft Whole-Wheat Chapatis, Steamed Rice &amp; Warm Seviyan Kheer</li>
+              </ul>
+              <div class="meal-slot-footer">
+                <span class="meal-slot-note">Light on oil, zero baking soda</span>
+                <strong>Comfort Dinner</strong>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= WEEKLY MEAL HIGHLIGHTS ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">No More Mess Monotony</span>
+          <h2>Weekly Signature Highlights Students Look Forward To</h2>
+          <p>We rotate our menu every week based on student committee feedback so you never get tired of eating the same
+            dal and sabzi.</p>
+        </div>
+
+        <div class="weekly-highlights-grid">
+          <div class="highlight-card">
+            <span class="highlight-day-badge">Every Wednesday &amp; Saturday</span>
+            <h3>South Indian Tiffin &amp; Chaas Counter</h3>
+            <p>Stone-ground fermented Ghee Roast Masala Dosa, Medu Vada, and fluffy Idlis with drumstick sambar in the
+              morning, followed by chilled Jeera-Pudina Chaas at lunch.</p>
+            <div style="margin-top: auto; padding-top: var(--space-3);">
+              <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Freshly Ground Batter</span>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <span class="highlight-day-badge">Every Friday Dinner</span>
+            <h3>Handi Dum Biryani &amp; Warm Dessert Night</h3>
+            <p>Long-grain aged basmati Subz Dum Biryani (and separate Chicken/Egg Dum Biryani counter) served with
+              Mirchi-ka-Salan, Burani Raita, and hot Moong Dal Halwa.</p>
+            <div style="margin-top: auto; padding-top: var(--space-3);">
+              <span class="diet-badge diet-badge-nonveg"><span class="fssai-dot"></span> Separate Veg &amp; Non-Veg
+                Counters</span>
+            </div>
+          </div>
+
+          <div class="highlight-card">
+            <span class="highlight-day-badge">Exam Week Care</span>
+            <h3>Late-Night Study Flask &amp; Light Khichdi Option</h3>
+            <p>During university mid-sem and end-sem weeks, students on Full-Day plans can request light Ghee Dal
+              Khichdi or pick up an evening flask of ginger tea/haldi milk.</p>
+            <div style="margin-top: auto; padding-top: var(--space-3);">
+              <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Included in Student Pass</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MEAL PLAN PREVIEW ======================= -->
+    <section class="section bg-sage">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Transparent Student Pricing</span>
+          <h2>Flexible Meal Plans Built for Hostel &amp; PG Budgets</h2>
+          <p>Choose a plan that matches your lecture schedule. All prices shown below are <strong>editable sample prices
+              in INR</strong> with zero hidden charges.</p>
+        </div>
+
+        <div class="plan-controls-bar">
+          <div class="segmented-control" role="group" aria-label="Billing Cycle">
+            <button type="button" class="segment-btn active" data-billing-cycle="monthly">Monthly Pass (30
+              Days)</button>
+            <button type="button" class="segment-btn" data-billing-cycle="weekly">Weekly Trial (7 Days)</button>
+          </div>
+          <div class="segmented-control" role="group" aria-label="Dietary Preference">
+            <button type="button" class="segment-btn active" data-diet-filter="veg">Pure Vegetarian</button>
+            <button type="button" class="segment-btn" data-diet-filter="nonveg">Veg + Egg / Non-Veg</button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Plan 1: Lunch & Dinner -->
+          <div class="pricing-card" data-plan-card="lunch-dinner" data-price-monthly-veg="2,850"
+            data-price-monthly-nonveg="3,250" data-price-weekly-veg="750" data-price-weekly-nonveg="880">
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h3 class="plan-name">Two-Meal Core Pass</h3>
+            <p class="plan-Best-for">Lunch + Dinner • Ideal for students with early morning classes</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">2,850</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing (~₹95/day for 2 full meals)</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Daily Full Lunch Thali (12:30 PM – 2:30 PM)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Daily Homestyle Dinner (7:45 PM – 9:30 PM)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Sunday Special Feast &amp; Friday Sweet included</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 4 days meal pause/carry-forward per month</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=lunch-dinner&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-outline btn-full" data-plan-cta>Enquire for Two-Meal Pass</a>
+          </div>
+
+          <!-- Plan 2: Full-Day 4 Meals (Featured) -->
+          <div class="pricing-card featured" data-plan-card="full-day-all" data-price-monthly-veg="3,600"
+            data-price-monthly-nonveg="4,100" data-price-weekly-veg="950" data-price-weekly-nonveg="1,100">
+            <span class="popular-ribbon">Most Popular for Hostelers</span>
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h3 class="plan-name">Complete 4-Meal Pass</h3>
+            <p class="plan-Best-for">Breakfast + Lunch + Evening Snacks + Dinner</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">3,600</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing (~₹120/day for all 4 meals)</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Hot Breakfast + Morning Chai/Coffee daily</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Unlimited Rice, Dal &amp; Hot Phulkas at Lunch &amp; Dinner</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Evening 5 PM Hostel Snacks &amp; Kulhad Tea</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Up to 6 days vacation/exam pause carry-forward</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=full-day-all&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-terracotta btn-full" data-plan-cta>Select Complete 4-Meal Pass</a>
+          </div>
+
+          <!-- Plan 3: Breakfast + Dinner (Day Scholar / Intern) -->
+          <div class="pricing-card" data-plan-card="breakfast-dinner" data-price-monthly-veg="2,400"
+            data-price-monthly-nonveg="2,750" data-price-weekly-veg="650" data-price-weekly-nonveg="760">
+            <div style="margin-bottom: var(--space-3);">
+              <span class="diet-badge diet-badge-veg" data-plan-diet-badge><span class="fssai-dot"></span> 100% Pure
+                Vegetarian</span>
+            </div>
+            <h3 class="plan-name">Morning &amp; Night Pass</h3>
+            <p class="plan-Best-for">Breakfast + Dinner • Ideal for interns &amp; clinical postings</p>
+            <div class="plan-price-block">
+              <div class="plan-price">
+                <span class="price-currency">₹</span>
+                <span class="price-amount">2,400</span>
+                <span class="price-period">/ month (30 days)</span>
+              </div>
+              <span class="price-sample-note">*Sample editable pricing (~₹80/day for 2 meals)</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Early Breakfast from 7:15 AM (Dosa/Poha/Paratha)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full Homestyle Dinner till 9:30 PM</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Option to pack morning tiffin on request</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Includes Sunday Special Lunch upgrade option</span>
+              </li>
+            </ul>
+            <a href="contact.html?plan=breakfast-dinner&amp;cycle=monthly&amp;diet=veg#enquiry-form"
+              class="btn btn-outline btn-full" data-plan-cta>Enquire for Morning &amp; Night</a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-8);">
+          <a href="meal-plans.html" class="btn btn-primary">Compare All 6 Plans &amp; Tiffin Options</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= HYGIENE & FOOD QUALITY SHOWCASE ======================= -->
+    <section class="section">
+      <div class="container split-section">
+        <div class="split-visual-collage">
+          <div class="collage-img-main">
+            <img src="assets/images/kitchen-hygiene-prep.jpg"
+              alt="Spotless commercial hostel mess kitchen with cooks in clean white aprons and hairnets preparing fresh vegetables"
+              width="500" height="625" loading="lazy" />
+          </div>
+          <div class="collage-img-secondary">
+            <img src="assets/images/mess-kitchen-roti.jpg"
+              alt="Homestyle mess cook puffing fresh whole-wheat rotis on an iron tawa" width="420" height="480"
+              loading="lazy" />
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow">Uncompromised Kitchen Standards</span>
+          <h2>A Mess Kitchen You Can Walk Into Any Time</h2>
+          <p class="lead">
+            Most hostel messes hide their kitchens behind closed doors. At Aangan Rasoi, students and parents are
+            invited to walk through our prep, storage, and washing zones any day between 10:00 AM and 8:00 PM.
+          </p>
+
+          <div class="checklist-grid">
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <h4>RO + UV Drinking &amp; Cooking Water</h4>
+                <p style="font-size: 0.84rem;">Every drop used in kneading dough, boiling dal, and table jugs passes
+                  multi-stage filtration.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <h4>Cold-Pressed Mustard &amp; Sunflower Oil</h4>
+                <p style="font-size: 0.84rem;">Strictly zero palm oil, zero vanaspati, and never re-heating leftover
+                  frying oil.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <h4>3-Sink Hot Water Steel Sanitization</h4>
+                <p style="font-size: 0.84rem;">Thalis, katoris, and spoons are washed with food-grade detergent and
+                  rinsed at 75°C.</p>
+              </div>
+            </div>
+            <div class="checklist-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <h4>Strictly Separate Veg &amp; Egg/Meat Zones</h4>
+                <p style="font-size: 0.84rem;">Dedicated utensils, color-coded chopping boards, and separate serving
+                  counters.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="hygiene.html" class="btn btn-outline">Explore Our 7-Point Hygiene Protocol</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= WHY STUDENTS CHOOSE US ======================= -->
+    <section class="section bg-secondary">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow eyebrow-sage">Built Around Student Life</span>
+          <h2>Why 650+ Hostel &amp; PG Students Eat With Us Daily</h2>
+          <p>We solved the biggest frustrations students face with traditional hostel messes and tiffin services.</p>
+        </div>
+
+        <div class="features-grid-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Pause Meals When Home</h3>
+            <p>Going home for a long weekend or festival? Inform us 12 hours prior and your unused meal days carry
+              forward to next month.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon terracotta">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </div>
+            <h3>Live Hot Roti Counter</h3>
+            <p>No cold, rubbery chapatis sitting in cassettes. Our cooks roll and puff phulkas live as you sit down at
+              the dining table.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+            </div>
+            <h3>Sick-Day Comfort Meal</h3>
+            <p>Feeling under the weather? Let our dining supervisor know for complimentary plain Moong Dal Khichdi,
+              curd, and warm turmeric milk.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon terracotta">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Student Menu Council</h3>
+            <p>Every last Sunday of the month, 10 subscribed students vote on next month's sabzis, breakfast items, and
+              Friday special desserts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= STUDENT TESTIMONIALS ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Student Voices</span>
+          <h2>Trusted by Students Living Away From Home</h2>
+          <p>Honest feedback from regular members who dine at Aangan Rasoi every day.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div>
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "In my first year, I changed three tiffin services because the food was swimming in oil and gave me
+                acidity before morning labs. At Aangan Rasoi, the dal tadka and hot phulkas genuinely remind me of my
+                mother's kitchen in Indore."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AS</div>
+              <div>
+                <div class="author-name">Aarav Sharma</div>
+                <div class="author-meta">3rd Year B.Tech CSE • Complete 4-Meal Pass (14 Months)</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "As a medical student with erratic hospital postings, the Morning &amp; Night Pass is a lifesaver. They
+                pack my morning idli/poha box by 7:20 AM sharp, and when I return at 9:00 PM, I still get piping hot
+                rotis."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">PK</div>
+              <div>
+                <div class="author-name">Priya Nair</div>
+                <div class="author-meta">Final Year MBBS Student • Morning &amp; Night Pass</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "My parents visited unannounced on a Tuesday afternoon and asked to see the kitchen. The manager happily
+                gave them hairnets and showed the dry ration store and washing area. My mom was immediately relieved."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RD</div>
+              <div>
+                <div class="author-name">Rohan Deshmukh</div>
+                <div class="author-meta">CA Final Aspirant • Two-Meal Core Pass</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CTA BANNER ======================= -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <span class="eyebrow" style="background: rgba(255,255,255,0.14); color: #FAF6F0;">Taste Before You
+              Subscribe</span>
+            <h2>Book a Single Trial Meal or 7-Day Starter Pass</h2>
+            <p>Walk into our dining hall near University Road for lunch or dinner, inspect our kitchen hygiene
+              firsthand, and decide only after you've tasted the food.</p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="contact.html#enquiry-form" class="btn btn-terracotta btn-lg">Book a Trial Meal</a>
+            <a href="meal-plans.html" class="btn btn-outline-light btn-lg">Compare Plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= SITE FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="brand-mark" style="background-color: var(--brand-terracotta); color: #fff;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z" />
+                <path d="M4 10h16v3a8 8 0 0 1-16 0v-3z" />
+                <path d="M3 21h18" />
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">Aangan Rasoi</span>
+              <span class="brand-tagline">Student Mess &amp; Dining</span>
+            </span>
+          </a>
+          <p>
+            Wholesome, hygienic, and affordable daily meals crafted for students living away from home. Freshly ground
+            spices, zero soda, and warm hospitality every day.
+          </p>
+          <span class="diet-badge diet-badge-veg"><span class="fssai-dot"></span> Separate Veg &amp; Non-Veg Kitchen
+            Lines</span>
+
+          <!-- Social Icons with Hover Effect (As Requested) -->
+          <div class="footer-social-strip" aria-label="Social media channels">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Chat on WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Subscribe on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+              aria-label="Follow us on X Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Quick Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Classic Warmth</a></li>
+            <li><a href="home-2.html">Home 2 — Editorial Dining</a></li>
+            <li><a href="about.html">About Us &amp; Story</a></li>
+            <li><a href="meal-plans.html">Monthly &amp; Weekly Plans</a></li>
+            <li><a href="hygiene.html">Kitchen Hygiene Standards</a></li>
+            <li><a href="contact.html">Contact &amp; Trial Enquiry</a></li>
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Student Portal</h3>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+            <li><a href="meal-plans.html#serving-schedule">Daily Serving Timings</a></li>
+            <li><a href="meal-plans.html#plan-comparison">Plan Comparison Table</a></li>
+            <li><a href="meal-plans.html#faq-section">Mess Rules &amp; FAQs</a></li>
+            <li><a href="signup.html">Create Student Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Dining Hall &amp; Timings</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Plot 42, Vidya Nagar Main Road, Near University North Gate, Pune – 411007</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+91 98230 45120 (Mess Desk &amp; WhatsApp)</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Open Daily: 07:15 AM – 09:45 PM (All 7 Days)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aangan Rasoi Student Mess &amp; Hostel Food Service. All rights reserved.</span>
+        <span>Sample Pricing &amp; Editable Content for Template Demonstration.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
