@@ -1041,26 +1041,38 @@ p {
   border-radius: var(--radius-xs);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  align-self: center;
-  margin-inline: auto;
-  text-align: center;
+  align-self: flex-start;
+  margin-inline: 0;
+  text-align: left;
 }
 
-/* Ensure all tags, badges & ribbons inside any cards are strictly centered */
+/* Ensure card headers, badges, and text align cleanly without awkward centering */
 .pricing-card .diet-badge,
 .feature-card .diet-badge,
-.meal-slot-card .diet-badge,
 .card .diet-badge,
 .pricing-card .eyebrow,
 .feature-card .eyebrow,
-.meal-slot-card .eyebrow,
 .pricing-card .pill-tag,
 .feature-card .pill-tag,
 .pricing-card .highlight-day-badge,
 .feature-card .highlight-day-badge {
-  align-self: center !important;
-  margin-inline: auto !important;
-  text-align: center !important;
+  align-self: flex-start !important;
+  margin-inline: 0 !important;
+  text-align: left !important;
+}
+
+html[dir="rtl"] .pricing-card .diet-badge,
+html[dir="rtl"] .feature-card .diet-badge,
+html[dir="rtl"] .card .diet-badge,
+html[dir="rtl"] .pricing-card .eyebrow,
+html[dir="rtl"] .feature-card .eyebrow,
+html[dir="rtl"] .pricing-card .pill-tag,
+html[dir="rtl"] .feature-card .pill-tag,
+html[dir="rtl"] .pricing-card .highlight-day-badge,
+html[dir="rtl"] .feature-card .highlight-day-badge {
+  align-self: flex-start !important;
+  margin-inline: 0 !important;
+  text-align: right !important;
 }
 
 .diet-badge-veg {
@@ -1397,6 +1409,48 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  .editorial-main-visual {
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .editorial-main-visual img {
+    border-radius: var(--radius-xl);
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+  }
+
+  /* Keep badge text & caption below the image on mobile & small viewports */
+  .editorial-overlay-caption {
+    position: static;
+    margin-top: var(--space-3);
+    border-radius: var(--radius-lg);
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .editorial-overlay-caption [style*="color: #E07A5B"] {
+    color: var(--brand-terracotta) !important;
+  }
+
+  .editorial-overlay-caption a.btn {
+    width: 100%;
+    margin-top: var(--space-2);
+  }
+}
+
 /* ==========================================================================
    TODAY'S MENU PREVIEW & INTERACTIVE WEEKLY MENU TABS
    ========================================================================== */
@@ -1502,12 +1556,17 @@ p {
 
 .meal-slot-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 6px;
+  justify-content: space-between;
+  text-align: left;
+  gap: var(--space-2);
   margin-bottom: var(--space-3);
+  width: 100%;
+}
+
+html[dir="rtl"] .meal-slot-header {
+  text-align: right;
 }
 
 .meal-slot-type {
@@ -1516,8 +1575,17 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--brand-terracotta);
-  text-align: center;
+  text-align: left;
   display: block;
+}
+
+html[dir="rtl"] .meal-slot-type {
+  text-align: right;
+}
+
+.meal-slot-header .diet-badge {
+  margin: 0 !important;
+  align-self: center !important;
 }
 
 .meal-slot-title {
@@ -1593,8 +1661,8 @@ p {
 }
 
 .highlight-day-badge {
-  align-self: center;
-  margin-inline: auto;
+  align-self: flex-start !important;
+  margin-inline: 0 !important;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1603,8 +1671,12 @@ p {
   border-radius: var(--radius-pill);
   background-color: var(--bg-sage-tint);
   color: var(--brand-primary);
-  text-align: center;
+  text-align: left !important;
   display: inline-flex;
+}
+
+html[dir="rtl"] .highlight-day-badge {
+  text-align: right !important;
 }
 
 /* ==========================================================================
@@ -1778,7 +1850,7 @@ p {
 }
 
 /* ==========================================================================
-   TABLET & 1024PX RESPONSIVE CARD GRIDS (2 PER ROW, ODD LAST IN CENTER, BIG CARD 1 IN ROW)
+   TABLET & 1024PX RESPONSIVE CARD GRIDS (UNIFORM 2 PER ROW, EQUAL SIZES & ALIGNMENT)
    ========================================================================== */
 @media (max-width: 1024px) and (min-width: 641px) {
 
@@ -1791,24 +1863,37 @@ p {
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: var(--space-6);
+    align-items: stretch !important;
   }
 
-  /* When there is an odd number of items, center the last item */
+  /* Pricing cards strictly equal size in tablet & 1024*1366px view */
+  .pricing-grid .pricing-card,
+  .pricing-grid-4 .pricing-card,
+  .features-grid-4 .feature-card {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .pricing-card .btn,
+  .feature-card .btn {
+    margin-top: auto !important;
+  }
+
+  /* When there is an odd number of items, center the last item and keep exact same width */
   .pricing-grid> :last-child:nth-child(odd),
-  .pricing-grid-4> :last-child:nth-child(odd),
   .features-grid-3> :last-child:nth-child(odd),
-  .features-grid-4> :last-child:nth-child(odd),
-  .today-menu-grid> :last-child:nth-child(odd),
-  .weekly-highlights-grid> :last-child:nth-child(odd),
   .testimonials-grid> :last-child:nth-child(odd) {
     grid-column: 1 / -1 !important;
     justify-self: center !important;
     width: 100% !important;
-    max-width: 540px !important;
+    max-width: calc((100% - var(--space-6)) / 2) !important;
   }
 
-  /* Big card 1 in one row */
-  .pricing-card.featured,
+  /* Big standalone visual cards */
   .card-big,
   .feature-card-big {
     grid-column: 1 / -1 !important;
@@ -2315,18 +2400,25 @@ html[dir="rtl"] .faq-question {
 }
 
 .auth-top-controls {
-  position: absolute;
-  top: var(--space-4);
-  right: var(--space-6);
+  width: 100%;
+  max-width: 490px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  padding-inline: var(--space-1);
   z-index: 10;
 }
 
+.auth-top-controls-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
 html[dir="rtl"] .auth-top-controls {
-  right: auto;
-  left: var(--space-6);
+  direction: rtl;
 }
 
 .auth-card {
@@ -2957,25 +3049,161 @@ html[dir="rtl"] .dashboard-nav-btn {
   }
 
   .dashboard-section-box {
-    padding: var(--space-5);
+    padding: var(--space-4) var(--space-3);
   }
 
   .dashboard-topbar {
     gap: var(--space-2);
+    flex-wrap: nowrap !important;
+    padding: var(--space-3) var(--space-3);
+  }
+
+  .dashboard-topbar-left {
+    min-width: 0;
+    gap: var(--space-2);
+    display: flex;
+    align-items: center;
+  }
+
+  .dashboard-hamburger-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
   }
 
   .dashboard-welcome-heading {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .dashboard-welcome-sub {
-    font-size: 0.78rem;
+    display: none;
+  }
+
+  .dashboard-topbar-profile-info {
+    display: none;
+  }
+
+  .dashboard-topbar-profile {
+    padding: 2px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .invoices-table th,
+  .invoices-table td {
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
   }
 }
 
-  .dashboard-section-box {
-    padding: var(--space-5);
+@media (max-width: 480px) {
+  .brand-tagline {
+    display: none !important;
   }
+
+  .nav-actions {
+    gap: 6px !important;
+  }
+
+  .mobile-menu-toggle {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+  }
+
+  .theme-toggle,
+  .rtl-toggle {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+[data-theme="dark"] input[type="date"] {
+  color-scheme: dark;
+}
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Dashboard Topbar Right (Profile, RTL, Theme in Top Right Corner) */
+.dashboard-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-left: auto;
+}
+
+.dashboard-topbar-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 12px 4px 6px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-xs);
+}
+
+.dashboard-topbar-profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+/* Calendar Date Input High-Contrast Indicator in Dark Mode */
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2) contrast(1.1);
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-xs);
+  transition: opacity var(--transition-fast);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Invoices Table Compact Responsiveness */
+.invoices-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoices-table th,
+.invoices-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+html[dir="rtl"] .invoices-table th,
+html[dir="rtl"] .invoices-table td {
+  text-align: right;
+}
+
+.invoices-table th {
+  background-color: var(--bg-secondary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 /* ==========================================================================
@@ -3221,4 +3449,71 @@ html[dir="rtl"] .dashboard-nav-btn {
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
+}
+
+/* ==========================================================================
+   UNIFIED BRAND LOGO COLOR ACROSS HEADER, FOOTER, AUTH, DASHBOARD
+   ========================================================================== */
+.brand-mark,
+.site-footer .brand-mark,
+.auth-brand-center .brand-mark,
+.dashboard-sidebar-brand .brand-mark {
+  background-color: var(--brand-terracotta) !important;
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   BACK TO TOP FLOATING BUTTON (ALL PAGES)
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background-color: var(--brand-terracotta);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(194, 94, 62, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: var(--brand-terracotta-hover);
+  box-shadow: 0 8px 24px rgba(194, 94, 62, 0.45);
+  transform: translateY(-3px);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 3px;
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+html[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 28px;
 }

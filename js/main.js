@@ -78,13 +78,14 @@
     /* Theme Toggle Event */
     const themeButtons = document.querySelectorAll('.theme-toggle');
     themeButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const current = rootEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
         const next = current === 'dark' ? 'light' : 'dark';
         applyTheme(next);
         try {
           localStorage.setItem(THEME_KEY, next);
-        } catch (e) {
+        } catch (err) {
           /* ignore */
         }
       });
@@ -93,13 +94,14 @@
     /* RTL Toggle Event */
     const rtlButtons = document.querySelectorAll('.rtl-toggle');
     rtlButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const current = rootEl.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
         const next = current === 'rtl' ? 'ltr' : 'rtl';
         applyDir(next);
         try {
           localStorage.setItem(DIR_KEY, next);
-        } catch (e) {
+        } catch (err) {
           /* ignore */
         }
       });
@@ -165,6 +167,11 @@
     });
 
     document.addEventListener('click', (e) => {
+      // Do not close mobile menu if clicking theme toggle or rtl toggle
+      if (e.target.closest('.theme-toggle') || e.target.closest('.rtl-toggle')) {
+        return;
+      }
+
       dropdownItems.forEach((item) => {
         if (!item.contains(e.target)) {
           item.classList.remove('open');
@@ -208,6 +215,8 @@
       monday: {
         label: 'Monday — Fresh Start Homely Spread',
         breakfast: {
+          image: 'assets/images/breakfast-spread.jpg',
+          imageAlt: 'Indori Poha, Jalebi & Masala Chai breakfast spread',
           title: 'Indori Poha, Jalebi & Masala Chai',
           items: [
             'Fluffy Kanda-Batata Poha with roasted peanuts & fresh coriander',
@@ -217,6 +226,8 @@
           note: 'Unlimited Poha & Chai refill'
         },
         lunch: {
+          image: 'assets/images/lunch-rajma.jpg',
+          imageAlt: 'Punjabi Rajma Masala & Jeera Rice Thali',
           title: 'Punjabi Rajma Masala & Jeera Rice Thali',
           items: [
             'Slow-simmered Jammu Rajma in home-ground tomato-ginger gravy',
@@ -226,6 +237,8 @@
           note: 'Unlimited Rice, Dal/Gravy & Rotis'
         },
         snacks: {
+          image: 'assets/images/snacks-chai.jpg',
+          imageAlt: 'Crispy Veg Cutlet & Ginger Kulhad Tea',
           title: 'Crispy Veg Cutlet & Ginger Kulhad Tea',
           items: [
             '2 Golden Beetroot & Potato Cutlets (air-fried / low oil)',
@@ -235,6 +248,8 @@
           note: 'Prepared fresh at 4:45 PM'
         },
         dinner: {
+          image: 'assets/images/dinner-paneer.jpg',
+          imageAlt: 'Lasooni Dal Tadka, Matar Paneer & Phulkas',
           title: 'Lasooni Dal Tadka, Matar Paneer & Phulkas',
           items: [
             'Homestyle Yellow Toor-Moong Dal with desi ghee garlic tempering',
@@ -247,6 +262,8 @@
       wednesday: {
         label: 'Wednesday — Mid-Week Student Favorites',
         breakfast: {
+          image: 'assets/images/south-indian-morning.jpg',
+          imageAlt: 'Crisp Masala Dosa, Idli & Sambar',
           title: 'Crisp Masala Dosa, Idli & Sambar',
           items: [
             'Golden Roast Aloo Masala Dosa + 2 Fluffy Steamed Idlis',
@@ -256,6 +273,8 @@
           note: 'Freshly fermented stone-ground batter'
         },
         lunch: {
+          image: 'assets/images/lunch-thali-mess.jpg',
+          imageAlt: 'Amritsari Chole, Bhature / Phulka & Chaas',
           title: 'Amritsari Chole, Bhature / Phulka & Chaas',
           items: [
             'Pindi Chole cooked with whole spices & amla (no artificial color)',
@@ -265,6 +284,8 @@
           note: 'Includes 1 glass spiced Chaas'
         },
         snacks: {
+          image: 'assets/images/hostel-snacks-samosa.jpg',
+          imageAlt: 'Baked Samosa Chaat & Masala Chai',
           title: 'Baked Samosa Chaat & Masala Chai',
           items: [
             'Punjabi Aloo-Peas Samosa topped with curd & chutneys',
@@ -274,6 +295,8 @@
           note: 'Hot off the kitchen counter'
         },
         dinner: {
+          image: 'assets/images/dinner-homestyle.jpg',
+          imageAlt: 'Palak Paneer / Methi Chicken & Dal Fry',
           title: 'Palak Paneer / Methi Chicken & Dal Fry',
           items: [
             'Iron-rich Homestyle Palak Paneer (or Homestyle Chicken Curry)',
@@ -286,6 +309,8 @@
       friday: {
         label: 'Friday — Comfort & Regional Classics',
         breakfast: {
+          image: 'assets/images/dosa-morning.jpg',
+          imageAlt: 'Stuffed Aloo-Pyaz Paratha & Fresh Curd',
           title: 'Stuffed Aloo-Pyaz Paratha & Fresh Curd',
           items: [
             '2 Whole-Wheat Stuffed Aloo-Methi Parathas cooked on iron tawa',
@@ -295,6 +320,8 @@
           note: '100% Chakki-milled MP Sharbati Atta'
         },
         lunch: {
+          image: 'assets/images/lunch-rajma.jpg',
+          imageAlt: 'Gujarati Kadhi Pakora, Bhindi Fry & Dal Khichdi',
           title: 'Gujarati Kadhi Pakora, Bhindi Fry & Dal Khichdi',
           items: [
             'Comforting Besan Kadhi with soft methi pakoras',
@@ -304,6 +331,8 @@
           note: 'Student comfort favorite'
         },
         snacks: {
+          image: 'assets/images/snacks-chai.jpg',
+          imageAlt: 'Sweet Corn Bhel & Elaichi Tea',
           title: 'Sweet Corn Bhel & Elaichi Tea',
           items: [
             'Steamed Butter Sweet Corn tossed with tomato, cucumber & lime',
@@ -313,6 +342,8 @@
           note: 'Light, energizing pre-study snack'
         },
         dinner: {
+          image: 'assets/images/dinner-paneer.jpg',
+          imageAlt: 'Veg Dum Biryani / Egg Biryani & Mirchi Salan',
           title: 'Veg Dum Biryani / Egg Biryani & Mirchi Salan',
           items: [
             'Aromatic Long-Grain Basmati Subz Dum Biryani (or Egg/Chicken Biryani)',
@@ -325,6 +356,8 @@
       sunday: {
         label: 'Sunday — Feast Day & Homely Indulgence',
         breakfast: {
+          image: 'assets/images/breakfast-spread.jpg',
+          imageAlt: 'Puri Bhaji, Sooji Halwa & Masala Chai',
           title: 'Puri Bhaji, Sooji Halwa & Masala Chai',
           items: [
             'Fluffy Whole-Wheat Puris with Hing-Jeera Aloo Tamatar Sabzi',
@@ -334,6 +367,8 @@
           note: 'Relaxed Sunday timing till 10:00 AM'
         },
         lunch: {
+          image: 'assets/images/lunch-thali-mess.jpg',
+          imageAlt: 'Grand Sunday Feast Thali (Paneer / Chicken Special)',
           title: 'Grand Sunday Feast Thali (Paneer / Chicken Special)',
           items: [
             'Paneer Lababdar (or Homestyle Sunday Chicken Masala)',
@@ -343,6 +378,8 @@
           note: 'Included in all Full-Day & Lunch plans'
         },
         snacks: {
+          image: 'assets/images/hostel-snacks-samosa.jpg',
+          imageAlt: 'Mumbai Vada Pav / Veg Sandwich & Chai',
           title: 'Mumbai Vada Pav / Veg Sandwich & Chai',
           items: [
             'Freshly grilled Chutney Veg Sandwich or Warm Batata Vada Pav',
@@ -352,6 +389,8 @@
           note: 'Served 5:00 PM – 6:15 PM'
         },
         dinner: {
+          image: 'assets/images/dinner-homestyle.jpg',
+          imageAlt: 'Light Sunday Comfort: Moong Dal Khichdi & Kadhi',
           title: 'Light Sunday Comfort: Moong Dal Khichdi & Kadhi',
           items: [
             'Digestive Ghee Tadka Moong Dal Khichdi after a heavy afternoon feast',
@@ -380,10 +419,17 @@
           ['breakfast', 'lunch', 'snacks', 'dinner'].forEach((slot) => {
             const card = document.querySelector(`[data-meal-slot="${slot}"]`);
             if (!card || !dayInfo[slot]) return;
+            const imgEl = card.querySelector('.meal-slot-img img') || card.querySelector('img');
             const titleEl = card.querySelector('.meal-slot-title');
             const listEl = card.querySelector('.meal-items-list');
             const noteEl = card.querySelector('.meal-slot-note');
 
+            if (imgEl && dayInfo[slot].image) {
+              imgEl.src = dayInfo[slot].image;
+              if (dayInfo[slot].imageAlt) {
+                imgEl.alt = dayInfo[slot].imageAlt;
+              }
+            }
             if (titleEl) titleEl.textContent = dayInfo[slot].title;
             if (listEl) {
               listEl.innerHTML = dayInfo[slot].items
@@ -751,6 +797,7 @@
 
       /* Close sidebar on click outside on mobile & tablet (<= 1024px) */
       document.addEventListener('click', (e) => {
+        if (e.target.closest('.theme-toggle') || e.target.closest('.rtl-toggle')) return;
         if (window.innerWidth <= 1024 && dashSidebar.classList.contains('is-open')) {
           if (!dashSidebar.contains(e.target)) {
             closeDashboardMenu();
@@ -862,6 +909,27 @@
             </div>
           `;
         }
+      });
+    }
+
+    /* ----------------------------------------------------------------------
+       BACK TO TOP FLOATING BUTTON
+       ---------------------------------------------------------------------- */
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
     }
   });

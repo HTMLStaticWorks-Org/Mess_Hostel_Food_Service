@@ -145,7 +145,7 @@
       <section class="dashboard-main">
         <!-- Topbar: Hamburger Button (Symbol ONLY, No Text) + Title + Status -->
         <div class="dashboard-topbar">
-          <div style="display: flex; align-items: center; gap: var(--space-3);">
+          <div class="dashboard-topbar-left" style="display: flex; align-items: center; gap: var(--space-3);">
             <!-- Hamburger menu symbol ONLY, no menu text -->
             <button type="button" class="dashboard-hamburger-btn" id="dashboard-mobile-toggle" aria-label="Open navigation menu" title="Open Menu">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -159,9 +159,38 @@
               <span class="dashboard-welcome-sub">Vidya Nagar Mess Hall &bull; Aangan Rasoi</span>
             </div>
           </div>
-          <!-- Clean status badge (Meal plans & Visit website moved to menu page) -->
-          <div class="dashboard-topbar-status">
-            <span class="diet-badge diet-badge-veg" style="margin: 0;"><span class="fssai-dot"></span> Active Student Pass</span>
+
+          <!-- Top Right Corner: Profile, RTL, and Theme Buttons -->
+          <div class="dashboard-topbar-right">
+            <!-- RTL Toggle: exact style with theme button, ONLY RTL text inside -->
+            <button type="button" class="btn-icon rtl-toggle" aria-label="Toggle RTL layout" title="Switch text direction">RTL</button>
+
+            <!-- Theme Toggle Button -->
+            <button type="button" class="btn-icon theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+              <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+
+            <!-- Student Profile Avatar Pill -->
+            <div class="dashboard-topbar-profile" title="Siddharth Verma (Hostel Block B)">
+              <div class="dashboard-topbar-avatar">SV</div>
+              <div class="dashboard-topbar-profile-info">
+                <span class="dashboard-profile-name">Siddharth V.</span>
+                <span class="dashboard-profile-id">ID: AR-442</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -431,7 +460,7 @@
 
             <div class="form-grid-2" style="margin-bottom: var(--space-8);">
               <!-- Payment Form -->
-              <div style="background-color: var(--bg-secondary); padding: var(--space-6); border-radius: var(--radius-xl); border: 1px solid var(--border-subtle);">
+              <div class="dashboard-fee-card" style="background-color: var(--bg-secondary); padding: var(--space-6); border-radius: var(--radius-xl); border: 1px solid var(--border-subtle);">
                 <span class="eyebrow eyebrow-sage" style="margin-bottom: var(--space-2);">Next Billing Cycle</span>
                 <h3 style="font-size: 1.4rem; margin-bottom: var(--space-1);">December 2026 Monthly Pass</h3>
                 <div class="plan-price" style="margin-block: var(--space-3);">
@@ -473,7 +502,7 @@
               <div>
                 <h3 style="font-size: 1.15rem; margin-bottom: var(--space-3);">Past Payment Invoices</h3>
                 <div class="table-responsive">
-                  <table class="comparison-table" style="min-width: 0;" aria-label="Past Payment Invoices">
+                  <table class="comparison-table invoices-table" style="min-width: 0;" aria-label="Past Payment Invoices">
                     <thead>
                       <tr>
                         <th>Month</th>
@@ -545,6 +574,13 @@
       </section>
     </div>
   </main>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>

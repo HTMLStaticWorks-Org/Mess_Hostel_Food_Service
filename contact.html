@@ -363,52 +363,19 @@
                 Pune, Maharashtra – 411007
               </p>
 
-              <!-- Stylized Interactive-Look Campus Map Placeholder -->
-              <div
-                style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-strong); background-color: var(--bg-surface); position: relative;">
-                <svg viewBox="0 0 600 320" width="100%" height="260" role="img"
-                  aria-label="Campus neighborhood map showing Aangan Rasoi near University North Gate and Student Hostels"
-                  style="display: block; background: #EDE5D6;">
-                  <!-- Map Roads -->
-                  <rect width="600" height="320" fill="#EFE8DA" />
-                  <path d="M0 160 L600 160" stroke="#FFFFFF" stroke-width="26" />
-                  <path d="M220 0 L220 320" stroke="#FFFFFF" stroke-width="22" />
-                  <path d="M440 0 L440 320" stroke="#FFFFFF" stroke-width="18" />
-                  <path d="M0 160 L600 160" stroke="#D7CBB8" stroke-width="2" stroke-dasharray="8 8" />
-
-                  <!-- Green Campus Park Blocks -->
-                  <rect x="24" y="24" width="170" height="110" rx="12" fill="#D5E3D7" stroke="#A8C2AC" />
-                  <text x="109" y="75" text-anchor="middle" fill="#1C3A2B" font-family="sans-serif" font-size="13"
-                    font-weight="700">UNIVERSITY CAMPUS</text>
-                  <text x="109" y="95" text-anchor="middle" fill="#3E5446" font-family="sans-serif" font-size="11">North
-                    Gate (180m)</text>
-
-                  <!-- Hostel Zone -->
-                  <rect x="24" y="190" width="170" height="105" rx="12" fill="#E4DDD0" stroke="#C9BAA3" />
-                  <text x="109" y="240" text-anchor="middle" fill="#15291E" font-family="sans-serif" font-size="12"
-                    font-weight="700">Student Hostels A–D</text>
-                  <text x="109" y="258" text-anchor="middle" fill="#5C7264" font-family="sans-serif" font-size="11">3
-                    Mins Walk</text>
-
-                  <!-- Library & Coaching Hub -->
-                  <rect x="462" y="24" width="116" height="110" rx="12" fill="#E4DDD0" stroke="#C9BAA3" />
-                  <text x="520" y="78" text-anchor="middle" fill="#15291E" font-family="sans-serif" font-size="12"
-                    font-weight="700">Central Library</text>
-
-                  <!-- Aangan Rasoi Pin Highlight -->
-                  <rect x="250" y="42" width="160" height="92" rx="14" fill="#1C3A2B" />
-                  <circle cx="330" cy="160" r="10" fill="#C25E3E" stroke="#FFFFFF" stroke-width="3" />
-                  <text x="330" y="78" text-anchor="middle" fill="#FAF6F0" font-family="serif" font-size="15"
-                    font-weight="700">Aangan Rasoi</text>
-                  <text x="330" y="98" text-anchor="middle" fill="#C9D8CD" font-family="sans-serif" font-size="11">Plot
-                    42, Vidya Nagar Rd</text>
-                  <text x="330" y="116" text-anchor="middle" fill="#E07858" font-family="sans-serif" font-size="10"
-                    font-weight="700">★ Open 7:15 AM – 9:45 PM</text>
-
-                  <!-- Road Label -->
-                  <text x="330" y="185" text-anchor="middle" fill="#5C7264" font-family="sans-serif" font-size="11"
-                    font-weight="700">VIDYA NAGAR MAIN ROAD</text>
-                </svg>
+              <!-- Real Interactive Google Maps Embed -->
+              <div class="map-container-responsive"
+                style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-strong); background-color: var(--bg-surface); position: relative; box-shadow: var(--shadow-sm); min-height: 280px; height: 280px;">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15129.83272449787!2d73.818816!3d18.55342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf376f920f63%3A0xb35a0f8bfdfcb71f!2sSavitribai%20Phule%20Pune%20University!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style="border:0; display: block; width: 100%; height: 100%; min-height: 280px;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Aangan Rasoi Student Mess Location Map">
+                </iframe>
               </div>
 
               <div
@@ -446,7 +413,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo">
-            <span class="brand-mark" style="background-color: var(--brand-terracotta); color: #fff;">
+            <span class="brand-mark">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 2a4 4 0 0 1 4 4v1H8V6a4 4 0 0 1 4-4z" />
@@ -574,6 +541,13 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>
