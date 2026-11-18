@@ -1771,18 +1771,24 @@ html[dir="rtl"] .highlight-day-badge {
 
 .plan-name {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.32rem;
   margin-bottom: var(--space-1);
   display: block;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .plan-Best-for {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
   margin-bottom: var(--space-5);
   display: block;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .plan-price-block {
@@ -1835,18 +1841,24 @@ html[dir="rtl"] .highlight-day-badge {
 
 .plan-features li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  font-size: 0.9rem;
+  font-size: 0.865rem;
   color: var(--text-secondary);
 }
 
+.plan-features li span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .plan-features li svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   color: var(--veg-color);
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 0;
 }
 
 /* ==========================================================================
@@ -3132,34 +3144,78 @@ html[dir="rtl"] .dashboard-nav-btn {
 [data-theme="dark"] input[type="date"] {
   color-scheme: dark;
 }
-    padding: 8px 10px !important;
-    font-size: 0.8rem !important;
-  }
-}
 
-/* Dashboard Topbar Right (Profile, RTL, Theme in Top Right Corner) */
+/* Dashboard Topbar Right (Profile, RTL, Theme in Top Right Corner — Single Row) */
 .dashboard-topbar-right {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--space-3);
   margin-left: auto;
+  flex-shrink: 0;
+}
+
+html[dir="rtl"] .dashboard-topbar-right {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .dashboard-topbar-profile {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  padding: 4px 12px 4px 6px;
+  gap: 10px;
+  height: 40px;
+  padding: 3px 14px 3px 4px;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-xs);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+html[dir="rtl"] .dashboard-topbar-profile {
+  padding: 3px 4px 3px 14px;
+}
+
+.dashboard-topbar-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background-color: var(--brand-primary);
+  color: #FAF6F0;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .dashboard-topbar-profile-info {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: 1.15;
+  text-align: left;
+}
+
+html[dir="rtl"] .dashboard-topbar-profile-info {
+  text-align: right;
+}
+
+.dashboard-profile-name {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dashboard-profile-id {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 /* Calendar Date Input High-Contrast Indicator in Dark Mode */
