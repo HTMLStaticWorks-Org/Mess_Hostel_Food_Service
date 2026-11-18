@@ -2416,7 +2416,7 @@ html[dir="rtl"] .faq-question {
   max-width: 490px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-2);
   margin-bottom: var(--space-3);
   padding-inline: var(--space-1);
