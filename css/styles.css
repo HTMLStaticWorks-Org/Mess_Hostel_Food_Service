@@ -1610,15 +1610,28 @@ html[dir="rtl"] .meal-slot-type {
   font-size: 0.875rem;
   color: var(--text-secondary);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   line-height: 1.45;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.meal-items-list li span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  display: inline-block;
 }
 
 .meal-items-list li::before {
   content: '•';
   color: var(--brand-terracotta);
   font-weight: 700;
+  flex-shrink: 0;
 }
 
 .meal-slot-footer {
@@ -1629,6 +1642,22 @@ html[dir="rtl"] .meal-slot-type {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-2);
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.meal-slot-footer .meal-slot-note {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1;
+}
+
+.meal-slot-footer strong {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -1958,10 +1987,12 @@ html[dir="rtl"] .highlight-day-badge {
 .table-responsive {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
+  display: block;
 }
 
 .comparison-table {
@@ -1969,6 +2000,35 @@ html[dir="rtl"] .highlight-day-badge {
   border-collapse: collapse;
   min-width: 680px;
   text-align: left;
+}
+
+/* Hygiene Cleaning Routine Schedule Table Specifics */
+.cleaning-routine-table {
+  min-width: 760px;
+}
+
+.cleaning-routine-table th:first-child,
+.cleaning-routine-table td:first-child {
+  white-space: nowrap !important;
+  width: 190px !important;
+  min-width: 180px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.cleaning-routine-table th:nth-child(2),
+.cleaning-routine-table td:nth-child(2) {
+  min-width: 170px;
+}
+
+.cleaning-routine-table th:nth-child(3),
+.cleaning-routine-table td:nth-child(3) {
+  min-width: 260px;
+}
+
+.cleaning-routine-table th:nth-child(4),
+.cleaning-routine-table td:nth-child(4) {
+  white-space: nowrap;
+  min-width: 160px;
 }
 
 html[dir="rtl"] .comparison-table {

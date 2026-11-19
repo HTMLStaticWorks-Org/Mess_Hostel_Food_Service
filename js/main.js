@@ -219,9 +219,9 @@
           imageAlt: 'Indori Poha, Jalebi & Masala Chai breakfast spread',
           title: 'Indori Poha, Jalebi & Masala Chai',
           items: [
-            'Fluffy Kanda-Batata Poha with roasted peanuts & fresh coriander',
-            '2 Boiled Eggs or Sprouted Moong Chaat (protein option)',
-            'Steaming Adrak-Elaichi Chai or Hot Filter Coffee'
+            'Fluffy Kanda-Batata Poha with roasted peanuts',
+            '2 Boiled Eggs or Sprouted Moong Chaat',
+            'Steaming Adrak-Elaichi Chai or Coffee'
           ],
           note: 'Unlimited Poha & Chai refill'
         },
@@ -230,20 +230,20 @@
           imageAlt: 'Punjabi Rajma Masala & Jeera Rice Thali',
           title: 'Punjabi Rajma Masala & Jeera Rice Thali',
           items: [
-            'Slow-simmered Jammu Rajma in home-ground tomato-ginger gravy',
-            'Seasonal Aloo Gobi Adraki + 4 Hot Tawa Phulkas with desi ghee',
-            'Steamed Basmati Jeera Rice, Boondi Raita & Kachumber Salad'
+            'Jammu Rajma in tomato-ginger gravy',
+            'Seasonal Aloo Gobi + 4 Tawa Phulkas',
+            'Basmati Jeera Rice, Raita & Salad'
           ],
-          note: 'Unlimited Rice, Dal/Gravy & Rotis'
+          note: 'Unlimited Rice, Dal & Rotis'
         },
         snacks: {
           image: 'assets/images/snacks-chai.jpg',
           imageAlt: 'Crispy Veg Cutlet & Ginger Kulhad Tea',
           title: 'Crispy Veg Cutlet & Ginger Kulhad Tea',
           items: [
-            '2 Golden Beetroot & Potato Cutlets (air-fried / low oil)',
-            'Fresh Pudina-Coriander Green Chutney & Tamarind Dip',
-            'Hot Ginger Cardamom Tea or Lemon Iced Tea'
+            '2 Beetroot & Potato Cutlets (low oil)',
+            'Fresh Pudina Chutney & Tamarind Dip',
+            'Hot Ginger Cardamom Kulhad Tea'
           ],
           note: 'Prepared fresh at 4:45 PM'
         },
@@ -252,9 +252,9 @@
           imageAlt: 'Lasooni Dal Tadka, Matar Paneer & Phulkas',
           title: 'Lasooni Dal Tadka, Matar Paneer & Phulkas',
           items: [
-            'Homestyle Yellow Toor-Moong Dal with desi ghee garlic tempering',
-            'Fresh Matar Paneer (or Egg Curry for Non-Veg subscribers)',
-            '4 Soft Whole-Wheat Chapatis, Steamed Rice & Warm Seviyan Kheer'
+            'Lasooni Toor Dal Tadka with desi ghee',
+            'Fresh Matar Paneer (or Egg Curry)',
+            '4 Soft Phulkas, Rice & Seviyan Kheer'
           ],
           note: 'Light on oil, zero baking soda'
         }
@@ -266,30 +266,30 @@
           imageAlt: 'Crisp Masala Dosa, Idli & Sambar',
           title: 'Crisp Masala Dosa, Idli & Sambar',
           items: [
-            'Golden Roast Aloo Masala Dosa + 2 Fluffy Steamed Idlis',
-            'Drumstick-Pumpkin Ratna Sambar & Fresh Coconut Chutney',
-            'Banana / Seasonal Fruit + Filter Coffee or Masala Tea'
+            'Golden Roast Masala Dosa + 2 Idlis',
+            'Drumstick Sambar & Fresh Coconut Chutney',
+            'Filter Coffee or Steaming Masala Tea'
           ],
-          note: 'Freshly fermented stone-ground batter'
+          note: 'Fresh stone-ground batter'
         },
         lunch: {
           image: 'assets/images/lunch-thali-mess.jpg',
           imageAlt: 'Amritsari Chole, Bhature / Phulka & Chaas',
           title: 'Amritsari Chole, Bhature / Phulka & Chaas',
           items: [
-            'Pindi Chole cooked with whole spices & amla (no artificial color)',
-            'Jeera Pulao, Fresh Mix Veg Poriyal & Whole-Wheat Rotis',
-            'Chilled Roasted-Cumin Buttermilk (Chaas) & Onion-Lemon Salad'
+            'Pindi Chole cooked with whole spices',
+            'Jeera Pulao & Whole-Wheat Rotis',
+            'Chilled Roasted-Cumin Chaas & Salad'
           ],
-          note: 'Includes 1 glass spiced Chaas'
+          note: 'Includes spiced buttermilk'
         },
         snacks: {
           image: 'assets/images/hostel-snacks-samosa.jpg',
           imageAlt: 'Baked Samosa Chaat & Masala Chai',
           title: 'Baked Samosa Chaat & Masala Chai',
           items: [
-            'Punjabi Aloo-Peas Samosa topped with curd & chutneys',
-            'Roasted Makhana-Peanut Namkeen bowl',
+            'Baked Samosa Chaat with sweet curd',
+            'Roasted Makhana-Peanut Namkeen',
             'Steaming Kulhad Masala Chai'
           ],
           note: 'Hot off the kitchen counter'
@@ -299,11 +299,11 @@
           imageAlt: 'Palak Paneer / Methi Chicken & Dal Fry',
           title: 'Palak Paneer / Methi Chicken & Dal Fry',
           items: [
-            'Iron-rich Homestyle Palak Paneer (or Homestyle Chicken Curry)',
-            'Dhaba-style Chana Dal Fry + 4 Soft Phulka Rotis',
-            'Steamed Rice, Cucumber Salad & Homemade Curd'
+            'Homestyle Palak Paneer or Chicken',
+            'Dhaba-style Chana Dal Fry + Rotis',
+            'Steamed Rice, Cucumber Salad & Curd'
           ],
-          note: 'Separate Veg & Non-Veg vessels & counters'
+          note: 'Separate Veg & Non-Veg counters'
         }
       },
       friday: {
@@ -313,20 +313,20 @@
           imageAlt: 'Stuffed Aloo-Pyaz Paratha & Fresh Curd',
           title: 'Stuffed Aloo-Pyaz Paratha & Fresh Curd',
           items: [
-            '2 Whole-Wheat Stuffed Aloo-Methi Parathas cooked on iron tawa',
-            'Thick Homemade Dahi, White Butter & Homemade Mango Pickle',
-            'Hot Masala Chai or Warm Haldi Milk'
+            '2 Stuffed Aloo-Methi Tawa Parathas',
+            'Homemade Dahi & Mango Pickle',
+            'Hot Masala Chai or Haldi Milk'
           ],
-          note: '100% Chakki-milled MP Sharbati Atta'
+          note: '100% Chakki-milled Sharbati Atta'
         },
         lunch: {
           image: 'assets/images/lunch-rajma.jpg',
           imageAlt: 'Gujarati Kadhi Pakora, Bhindi Fry & Dal Khichdi',
           title: 'Gujarati Kadhi Pakora, Bhindi Fry & Dal Khichdi',
           items: [
-            'Comforting Besan Kadhi with soft methi pakoras',
-            'Crispy Kurkuri Bhindi Masala + Toor Dal Tadka',
-            'Ghee Phulkas, Steamed Rice, Roasted Papad & Beetroot Salad'
+            'Comforting Besan Kadhi Pakora',
+            'Kurkuri Bhindi Masala + Toor Dal',
+            'Ghee Phulkas, Steamed Rice & Salad'
           ],
           note: 'Student comfort favorite'
         },
@@ -335,22 +335,22 @@
           imageAlt: 'Sweet Corn Bhel & Elaichi Tea',
           title: 'Sweet Corn Bhel & Elaichi Tea',
           items: [
-            'Steamed Butter Sweet Corn tossed with tomato, cucumber & lime',
+            'Steamed Butter Sweet Corn with lime',
             '2 Multi-grain Bakery Cookies',
             'Hot Cardamom Tea or Cold Coffee'
           ],
-          note: 'Light, energizing pre-study snack'
+          note: 'Light pre-study fuel'
         },
         dinner: {
           image: 'assets/images/dinner-paneer.jpg',
           imageAlt: 'Veg Dum Biryani / Egg Biryani & Mirchi Salan',
           title: 'Veg Dum Biryani / Egg Biryani & Mirchi Salan',
           items: [
-            'Aromatic Long-Grain Basmati Subz Dum Biryani (or Egg/Chicken Biryani)',
-            'Hyderabadi Peanut-Sesame Salan & Thick Vegetable Raita',
-            'Warm Moong Dal Halwa or Gulab Jamun (1 pc)'
+            'Aromatic Subz or Chicken Dum Biryani',
+            'Hyderabadi Salan & Vegetable Raita',
+            'Warm Moong Dal Halwa or Gulab Jamun'
           ],
-          note: 'Friday Night Special Dinner'
+          note: 'Friday Night Special Feast'
         }
       },
       sunday: {
@@ -360,31 +360,31 @@
           imageAlt: 'Puri Bhaji, Sooji Halwa & Masala Chai',
           title: 'Puri Bhaji, Sooji Halwa & Masala Chai',
           items: [
-            'Fluffy Whole-Wheat Puris with Hing-Jeera Aloo Tamatar Sabzi',
-            'Warm Kesar Sooji Halwa garnished with almonds',
-            'Steaming Kulhad Chai & Fresh Cut Papaya'
+            'Fluffy Puris with Hing-Jeera Aloo',
+            'Warm Kesar Sooji Halwa with almonds',
+            'Steaming Kulhad Chai & Fresh Papaya'
           ],
-          note: 'Relaxed Sunday timing till 10:00 AM'
+          note: 'Relaxed timing till 10:00 AM'
         },
         lunch: {
           image: 'assets/images/lunch-thali-mess.jpg',
           imageAlt: 'Grand Sunday Feast Thali (Paneer / Chicken Special)',
           title: 'Grand Sunday Feast Thali (Paneer / Chicken Special)',
           items: [
-            'Paneer Lababdar (or Homestyle Sunday Chicken Masala)',
-            'Dal Makhani (slow-cooked 6 hours), Veg Pulao & Garlic Naan / Rotis',
-            'Pineapple Raita, Green Salad, Papad & Rasmalai / Gulab Jamun'
+            'Paneer Lababdar or Chicken Masala',
+            'Slow-cooked Dal Makhani & Phulkas',
+            'Pineapple Raita & Warm Sweet'
           ],
-          note: 'Included in all Full-Day & Lunch plans'
+          note: 'Grand Sunday Feast Thali'
         },
         snacks: {
           image: 'assets/images/hostel-snacks-samosa.jpg',
           imageAlt: 'Mumbai Vada Pav / Veg Sandwich & Chai',
           title: 'Mumbai Vada Pav / Veg Sandwich & Chai',
           items: [
-            'Freshly grilled Chutney Veg Sandwich or Warm Batata Vada Pav',
-            'Dry Garlic Chutney & Green Coriander Dip',
-            'Hot Adrak Chai'
+            'Grilled Veg Sandwich or Vada Pav',
+            'Dry Garlic Chutney & Green Dip',
+            'Hot Adrak Chai in clay kulhad'
           ],
           note: 'Served 5:00 PM – 6:15 PM'
         },
@@ -393,11 +393,11 @@
           imageAlt: 'Light Sunday Comfort: Moong Dal Khichdi & Kadhi',
           title: 'Light Sunday Comfort: Moong Dal Khichdi & Kadhi',
           items: [
-            'Digestive Ghee Tadka Moong Dal Khichdi after a heavy afternoon feast',
-            'Aloo Methi Tuk, Gujarati Kadhi & Phulka Rotis',
-            'Roasted Papad, Homemade Pickle & Warm Milk'
+            'Light Khichdi with Ghee & Papad',
+            'Aloo Methi Sabzi & Fresh Dahi',
+            'Roasted Papad, Pickle & Warm Milk'
           ],
-          note: 'Easy on the stomach before Monday classes'
+          note: 'Easy stomach reset for Monday'
         }
       }
     };
@@ -433,7 +433,7 @@
             if (titleEl) titleEl.textContent = dayInfo[slot].title;
             if (listEl) {
               listEl.innerHTML = dayInfo[slot].items
-                .map((item) => `<li>${item}</li>`)
+                .map((item) => `<li><span>${item}</span></li>`)
                 .join('');
             }
             if (noteEl) noteEl.textContent = dayInfo[slot].note;
